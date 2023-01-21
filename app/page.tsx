@@ -1,5 +1,8 @@
+import Image from 'next/image';
+
 import LinkedInIcon from './../components/icons/LinkedInIcon';
 import GithubIcon from './../components/icons/GithubIcon';
+import profile from '../public/profile.png';
 
 export default function Home() {
   console.log('Hello from HOME');
@@ -23,6 +26,10 @@ export default function Home() {
         <div className="h-8 w-8">
           <GithubIcon />
         </div>
+      </div>
+
+      <div className="mx-auto w-full bg-red-200">
+        <Image src={profile} alt="Profile Image" />
       </div>
     </div>
   );
