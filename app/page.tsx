@@ -3,34 +3,40 @@ import Image from 'next/image';
 import LinkedInIcon from './../components/icons/LinkedInIcon';
 import GithubIcon from './../components/icons/GithubIcon';
 import profile from '../public/profile.png';
+import profileNoBg from '../public/profile-nobg.png';
 
 export default function Home() {
   console.log('Hello from HOME');
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4">
-      <div className="py-10 text-center">
-        <p className=" text-5xl font-medium text-cyan-600 ">Mahbubur Rahman</p>
-        <p className="mt-2 text-2xl">Typescript, C# and Dart Developer </p>
-        <p className="text-md mt-5 leading-8 text-gray-800">
+    <div className='mx-auto w-full max-w-5xl px-4'>
+      <div className='py-10 text-center'>
+        <p className='text-5xl font-medium text-cyan-600 '>Mahbubur Rahman</p>
+        <p className='mt-2 text-2xl'>Typescript, C# and Dart Developer </p>
+        <p className='text-md mt-5 leading-8 text-gray-800'>
           I am a versatile developer with 2+ years of experience in Typescript, C#, Dart, VueJs,
           .Net Core, and Flutter. Strong in both front-end and back-end development, with a proven
           ability to deliver high-quality solutions.
         </p>
       </div>
 
-      <div className="flex justify-center gap-16">
-        <div className="h-8 w-8">
+      <div className='flex justify-center gap-16'>
+        <div className='h-8 w-8'>
           <LinkedInIcon />
         </div>
-        <div className="h-8 w-8">
+        <div className='h-8 w-8'>
           <GithubIcon />
         </div>
       </div>
 
-      <div className="mx-auto w-full bg-red-200">
-        <Image src={profile} alt="Profile Image" />
-      </div>
+      <Image
+        src={profileNoBg}
+        alt='Profile Image'
+        style={{
+          objectFit: 'contain',
+        }}
+        className='mx-auto mt-10 h-80 w-80 rounded-full bg-gradient-to-b from-cyan-600'
+      />
     </div>
   );
 }
