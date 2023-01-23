@@ -6,6 +6,7 @@ import profile from '../public/profile.png';
 import profileNoBg from '../public/profile-nobg.png';
 import TechnologyList from '@/components/TechnologyList';
 import PortfolioList from '@/components/PortfolioList';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function Home() {
   console.log('Hello from HOME');
@@ -22,14 +23,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className='flex justify-center gap-16'>
-        <div className='h-8 w-8'>
-          <LinkedInIcon />
-        </div>
-        <div className='h-8 w-8'>
-          <GithubIcon />
-        </div>
-      </div>
+      <SocialLinks />
 
       <Image
         src={profileNoBg}

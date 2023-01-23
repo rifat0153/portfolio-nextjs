@@ -3,7 +3,7 @@ import React from 'react';
 export default function TechnologyList() {
   return (
     <>
-      <p className='pb-2 text-2xl font-medium'>Technologies I Have Used</p>
+      <p className='pb-2 text-2xl font-medium'>Technologies</p>
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
         <div className='rounded-md py-4 text-center font-medium text-black shadow-lg '>
           <p>Flutter</p>
