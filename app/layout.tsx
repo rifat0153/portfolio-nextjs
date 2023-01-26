@@ -1,3 +1,4 @@
+import { AnalyticsWrapper } from '@/components/analytics';
 import { Alegreya, Inter } from '@next/font/google';
 import './globals.css';
 
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
 
         <main>{children}</main>
+
+        <AnalyticsWrapper />
       </body>
     </html>
   );
