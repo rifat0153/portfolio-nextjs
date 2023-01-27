@@ -1,22 +1,17 @@
 import Image from 'next/image';
 
-import LinkedInIcon from './../components/icons/LinkedInIcon';
-import GithubIcon from './../components/icons/GithubIcon';
-import profile from '../public/profile.png';
 import profileNoBg from '../public/profile-nobg.png';
 import TechnologyList from '@/components/TechnologyList';
 import PortfolioList from '@/components/PortfolioList';
 import SocialLinks from '@/components/SocialLinks';
 
 export default function Home() {
-  console.log('Hello from HOME');
-
   return (
     <div className='mx-auto w-full max-w-5xl px-4 pb-40'>
       <div className='py-10 text-center'>
         <p className='text-5xl font-medium text-cyan-600 '>Mahbubur Rahman</p>
-        <p className='mt-2 text-2xl'>Typescript, C# and Dart Developer </p>
-        <p className='text-md mt-5 leading-8 text-gray-800'>
+        <p className='mt-2 text-2xl dark:text-gray-100'>Typescript, C# and Dart Developer </p>
+        <p className='text-md mt-5 leading-8 text-gray-800 dark:text-gray-300'>
           I am a versatile developer with 2+ years of experience in Typescript, C#, Dart, VueJs,
           .Net Core, and Flutter. Strong in both front-end and back-end development, with a proven
           ability to deliver high-quality solutions.

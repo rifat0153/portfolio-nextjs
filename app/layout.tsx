@@ -1,11 +1,16 @@
+'use client';
+
 import { AnalyticsWrapper } from '@/components/analytics';
 import { Alegreya, Inter } from '@next/font/google';
+import { useState } from 'react';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const alegreya = Alegreya({ subsets: ['latin'], variable: '--font-alegreya' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [darkMode, setdarkMode] = useState(false);
+
   return (
     <html lang='en'>
       {/*
@@ -14,14 +19,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <head />
 
-      <body className={`${alegreya.variable} ${inter.variable} font-sans`}>
-        <nav className='flex w-full items-center justify-between gap-4 px-10 py-4  '>
+      <body
+        className={`
+        ${darkMode ? 'dark' : ''}
+        ${alegreya.variable} ${inter.variable} font-sans`}
+      >
+        <nav
+          className='flex w-full items-center justify-between gap-4 px-10 py-4
+                       dark:bg-gray-900 dark:text-gray-200'
+        >
           <p className='font-burtons font-alegreya text-2xl font-bold'>Dev Portfolio</p>
 
-          <div className='flex items-center gap-8'>
+          <div className='flex items-center gap-8 '>
             <svg
+              onClick={() => setdarkMode((v) => !v)}
               className='h-5 w-5'
-              fill='#000000'
+              fill={darkMode ? '#fff' : '#000'}
               viewBox='0 0 35 35'
               data-name='Layer 2'
               id='Layer_2'
@@ -34,13 +47,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </g>
             </svg>
 
-            <button className='cursor-pointer rounded-sm bg-gradient-to-r from-cyan-500 to-teal-500 px-2 py-1 '>
+            <button
+              className='cursor-pointer rounded-sm bg-gradient-to-r from-cyan-500 to-teal-500 px-2 py-1 '
+              onClick={() => {
+                window.open(
+                  'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/CV%20-%20Mahbubur%20Rahman%20Jan%2026%20V1%20(1).pdf?alt=media&token=6bfa50b9-3c54-41cd-8f74-58253c9420ff',
+                  '_blank'
+                );
+              }}
+            >
               Resume
             </button>
           </div>
         </nav>
 
-        <main>{children}</main>
+        <main className='dark:bg-gray-900'>{children}</main>
 
         <AnalyticsWrapper />
       </body>
