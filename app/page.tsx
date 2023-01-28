@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
-import profileNoBg from '../public/profile-nobg.png';
+import profileNoBg from '@/public/profile-nobg.png';
 import TechnologyList from '@/components/TechnologyList';
 import PortfolioList from '@/components/PortfolioList';
 import SocialLinks from '@/components/SocialLinks';
+import CompanyList from '@/components/CompanyList';
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
 
       <p className='pt-10 text-2xl font-medium'>Experience</p>
 
-      <p className='pt-2 pb-10 text-base leading-8'>
+      <p className='pt-2 pb-20 text-base leading-8'>
         As a professional developer, I offer a wide range of services to my clients. My expertise
         includes full-stack web development using technologies such as{' '}
         <span className='font-medium text-cyan-600'>VueJS</span> and{' '}
@@ -54,6 +55,8 @@ export default function Home() {
       </p>
 
       <TechnologyList />
+
+      <CompanyList />
 
       <div className='mt-10'>
         <PortfolioList />

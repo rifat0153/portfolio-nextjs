@@ -1,9 +1,8 @@
-import React from 'react';
-
 export default function TechnologyList() {
   return (
-    <>
-      <p className='pb-2 text-2xl font-medium'>Technologies</p>
+    <div className='pb-20'>
+      <p className='pb-4 text-2xl font-medium'>Technologies</p>
+
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
         <div className='rounded-md py-4 text-center font-medium text-black shadow-lg '>
           <p>Flutter</p>
@@ -41,6 +40,6 @@ export default function TechnologyList() {
           <div>Moq</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
