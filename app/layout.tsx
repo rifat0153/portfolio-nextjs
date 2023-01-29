@@ -21,12 +21,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body
         className={`
+        transition-colors duration-1000
         ${darkMode ? 'dark' : ''}
         ${alegreya.variable} ${inter.variable} font-sans`}
       >
         <nav
           className='flex w-full items-center justify-between gap-4 px-10 py-4
-                       dark:bg-gray-900 dark:text-gray-200'
+                      transition-colors duration-500  dark:bg-gray-900 dark:text-gray-200'
         >
           <p className='font-burtons font-alegreya text-2xl font-bold'>Dev Portfolio</p>
 
@@ -61,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </nav>
 
-        <main className='dark:bg-gray-900'>{children}</main>
+        <main className='transition-colors duration-500 dark:bg-gray-900'>{children}</main>
 
         <AnalyticsWrapper />
       </body>

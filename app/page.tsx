@@ -5,13 +5,14 @@ import TechnologyList from '@/components/TechnologyList';
 import PortfolioList from '@/components/PortfolioList';
 import SocialLinks from '@/components/SocialLinks';
 import CompanyList from '@/components/CompanyList';
+import Disclaimer from '@/components/Disclaimer';
 
 export default function Home() {
   return (
-    <div className='mx-auto w-full max-w-5xl px-4 pb-40'>
+    <div className='mx-auto w-full max-w-5xl px-4 pb-40 dark:text-gray-200'>
       <div className='py-10 text-center'>
         <p className='text-5xl font-medium text-cyan-600 '>Mahbubur Rahman</p>
-        <p className='mt-2 text-2xl dark:text-gray-100'>Typescript, C# and Dart Developer </p>
+        <p className='mt-2 text-2xl dark:text-gray-100'>Typescript, Dart and C# Developer </p>
         <p className='text-md mt-5 leading-8 text-gray-800 dark:text-gray-300'>
           I am a versatile developer with 2+ years of experience in Typescript, C#, Dart, VueJs,
           .Net Core, and Flutter. Strong in both front-end and back-end development, with a proven
@@ -32,14 +33,14 @@ export default function Home() {
 
       <p className='pt-10 text-2xl font-medium'>Experience</p>
 
-      <p className='pt-2 pb-20 text-base leading-8'>
+      <p className='pt-2 pb-20 text-base leading-8 lg:pb-32'>
         As a professional developer, I offer a wide range of services to my clients. My expertise
         includes full-stack web development using technologies such as{' '}
-        <span className='font-medium text-cyan-600'>VueJS</span> and{' '}
-        <span className='font-medium text-cyan-600'>NextJS</span>, mobile app development using{' '}
+        <span className='font-medium text-cyan-600'>Vue 3</span> and{' '}
+        <span className='font-medium text-cyan-600'>React</span>, mobile app development using{' '}
         <span className='font-medium text-cyan-600'>Flutter</span>, API development using{' '}
         <span className='font-medium text-cyan-600'>.NET Core</span> and{' '}
-        <span className='font-medium text-cyan-600'>Docker</span>. I have experience working with
+        <span className='font-medium text-cyan-600'>NodeJS</span>. I have experience working with
         agencies and startups on various projects, and I have also worked in the industry as a{' '}
         <span className='font-medium text-cyan-600'>VueJS</span> and{' '}
         <span className='font-medium text-cyan-600'>.Net</span> developer. I possess a strong
@@ -58,8 +59,12 @@ export default function Home() {
 
       <CompanyList />
 
-      <div className='mt-10'>
+      <div className='mt-32'>
         <PortfolioList />
+      </div>
+
+      <div className='mt-32'>
+        <Disclaimer />
       </div>
     </div>
   );

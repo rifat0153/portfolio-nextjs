@@ -6,7 +6,7 @@ function CompanyList() {
       <p className='pb-10 text-center text-2xl font-bold text-violet-600'>
         Companies I have worked for
       </p>
-      <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-16'>
         <CompanyTile
           description='Senceive is a UK-based technology company that specializes in the design, development, and manufacture of wireless monitoring systems. Their systems are used in a variety of applications, such as civil engineering, construction, and environmental monitoring.'
           name='Senceive'
@@ -14,7 +14,7 @@ function CompanyList() {
           image='https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/senceive-1.png?alt=media&token=aec7c648-318c-4757-8275-6266b7cfeff7'
           country='UK'
           link='https://www.senceive.com/'
-          classes='from-green-100'
+          classes='from-green-100 dark:from-green-900/20'
           key={0}
         />
 
@@ -25,10 +25,8 @@ function CompanyList() {
           country='UK'
           link='https://spotlas.com/'
           image='https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/spotlas-img-1.png?alt=media&token=06585427-a04e-463a-93b8-3cccd78dc0e1'
-          classes='from-pink-100'
+          classes='from-pink-100 dark:from-pink-900/20'
         />
-
-        {/* <p>The Daily Star, Dhaka, Bangladesh</p> */}
 
         <CompanyTile
           name='RSI Lab'
@@ -37,10 +35,8 @@ function CompanyList() {
           country='Bangladesh'
           link='https://www.rsi-lab.com/'
           image='https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/RSI-Lab-1.png?alt=media&token=395b538e-83fc-4760-88e1-afd2a8bf9e8e'
-          classes='from-blue-100'
+          classes='from-blue-100 dark:from-blue-900/20'
         />
-
-        {/* <p>Plan B Insights, Dhaka, Bangladesh</p> */}
 
         <CompanyTile
           name='Plan B Insights'
@@ -49,7 +45,7 @@ function CompanyList() {
           country='Bangladesh'
           link='https://www.facebook.com/PlanbInsights/'
           image='https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/plan%20b%20insights%201.png?alt=media&token=e7faf080-208c-44c7-8303-0578a742b816'
-          classes='from-gray-100'
+          classes='from-gray-100 dark:from-gray-900'
         />
       </div>
     </>

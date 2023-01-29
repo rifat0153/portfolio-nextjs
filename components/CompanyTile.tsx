@@ -12,10 +12,8 @@ export default function CompanyTile(props: {
 }) {
   return (
     <div
-      className={
-        'relative h-[25rem] overflow-hidden rounded-2xl border-2 border-gray-300 bg-gradient-to-b ' +
-        `${props.classes} `
-      }
+      className={`relative h-[25rem] overflow-hidden rounded-2xl border-2 border-gray-300 bg-gradient-to-b
+           dark:text-gray-300 ${props.classes}`}
     >
       <div className='absolute inset-x-0 top-0 flex h-[17rem] flex-col items-start justify-center gap-2 overflow-hidden text-ellipsis p-4 leading-8'>
         <p className='text-xl font-bold'>
@@ -27,7 +25,7 @@ export default function CompanyTile(props: {
 
       <div
         className='absolute inset-x-0 bottom-0 h-[8rem] w-full border-t-[1px] border-gray-200 bg-white transition-all 
-                  duration-500 hover:h-[20rem]'
+                  duration-700 hover:h-[10rem]'
       >
         <Image
           src={props.image!}
