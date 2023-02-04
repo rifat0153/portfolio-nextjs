@@ -9,7 +9,7 @@ export default function TechnologyList() {
                      dark:shadow-slate-800'
         >
           <p>Flutter</p>
-          <p className='text-sm text-gray-500 dark:text-gray-400'>2+ years</p>
+          <p className='text-sm text-gray-500 dark:text-gray-400'>3 years</p>
 
           <p className='text-cyan-600'>Flutter Tech I Use</p>
 
