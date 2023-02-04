@@ -12,6 +12,10 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      fontSize: {
+        '7xl': '5rem',
+        md: '1.125rem',
+      },
       fontFamily: {
         sans: ['var(--font-inter)'],
         alegreya: ['var(--font-alegreya)'],

@@ -1,3 +1,9 @@
+import Image from "next/image"
+
+import flutterSvg from '@/public/flutterio-icon.svg';
+import vueSvg from '@/public/vuejs-icon.svg';
+import dotnetLogo from '@/public/dotnet-logo.png';
+
 export default function TechnologyList() {
   return (
     <div className='pb-20 dark:text-gray-200 lg:pb-40'>
@@ -8,45 +14,90 @@ export default function TechnologyList() {
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700 dark:text-gray-200
                      dark:shadow-slate-800'
         >
-          <p>Flutter</p>
-          <p className='text-sm text-gray-500 dark:text-gray-400'>3 years</p>
+          <Image src={flutterSvg}
+            width={300}
+            height={300}
+            alt='Flutter Image'
+            style={{
+              objectFit: 'contain',
+              width: '80%',
+            }}
+            className='mx-auto my-2 rounded-full p-10'
+          />
+
+          <p className="text-lg lg:text-2xl pb-2 font-medium">Flutter</p>
+          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>2.5+ years</p>
 
           <p className='text-cyan-600'>Flutter Tech I Use</p>
 
-          <div>Riverpod</div>
-          <div>Firebase</div>
-          <div>Freezed</div>
-          <div>Local Packages</div>
+          <div
+            className="lg:text-lg font-medium"
+          >
+            <p >Riverpod</p>
+            <p >Firebase</p>
+            <p >Freezed</p>
+            <p >Local Packages</p>
+          </div>
         </div>
 
         <div
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700
                     dark:text-gray-200 dark:shadow-slate-800'
         >
-          <p>VueJS</p>
-          <p className='text-sm text-gray-500'>1+ years</p>
+          <Image src={vueSvg}
+            width={300}
+            height={300}
+            alt='VueJs Image'
+            style={{
+              objectFit: 'contain',
+              width: '80%',
+            }}
+            className='mx-auto my-2 rounded-full p-10'
+          />
+
+          <p className="text-lg lg:text-2xl pb-2 font-medium">VueJS</p>
+          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>1+ years</p>
 
           <p className='text-cyan-600'>Vue Techs I Use</p>
 
-          <div>Composable</div>
-          <div>Tailwind</div>
-          <div>Pinia</div>
-          <div>Vitest</div>
+          <div
+            className="lg:text-lg font-medium"
+          >
+            <div>Composable</div>
+            <div>Tailwind</div>
+            <div>Pinia</div>
+            <div>Vitest</div>
+          </div>
         </div>
 
         <div
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700
                     dark:text-gray-200 dark:shadow-slate-800'
         >
-          <p>.Net Core</p>
-          <p className='text-sm text-gray-500'>1+ years</p>
+          <Image src={dotnetLogo}
+            width={300}
+            height={300}
+            alt='Dotnet Core Image'
+            style={{
+              objectFit: 'contain',
+              width: '80%',
+            }}
+            className='mx-auto my-2 rounded-full p-10'
+          />
+
+          <p className="text-lg lg:text-2xl pb-2 font-medium">.Net Core</p>
+          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>1+ years</p>
 
           <p className='text-cyan-600'>.Net Techs I Use</p>
 
-          <div>Web API</div>
-          <div>EF Core</div>
-          <div>xUnit</div>
-          <div>Moq</div>
+          <div
+            className="lg:text-lg font-medium"
+          >
+            <div>Web API</div>
+            <div>EF Core</div>
+            <div>xUnit</div>
+            <div>Moq</div>
+          </div>
         </div>
       </div>
     </div>
