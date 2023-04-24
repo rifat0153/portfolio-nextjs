@@ -62,8 +62,8 @@ export default function Home() {
         managed the team and delivered the project on time. I hepled junior developers write
         <span className='font-medium text-cyan-600'> clean </span>
         and <span className='font-medium text-cyan-600'> maintable </span>
-        code. This experience has helped me develop
-        strong leadership skills and the ability to work well in a team environment.
+        code. This experience has helped me develop strong leadership skills and the ability to work
+        well in a team environment.
       </p>
 
       <TechnologyList />
