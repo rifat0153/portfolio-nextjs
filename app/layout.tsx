@@ -3,7 +3,7 @@
 import { AnalyticsWrapper } from '@/components/analytics';
 import Header from '@/components/Header';
 import { useDarkMode } from '@/hooks/useDarkMode';
-import { Alegreya, Inter, Roboto, Barriecito } from '@next/font/google';
+import { Alegreya, Inter } from '@next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
