@@ -1,17 +1,33 @@
 'use client';
 
 import { useDarkMode } from '@/hooks/useDarkMode';
-import React from 'react';
+
+const resumeLink =
+  'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/MAHBUBUR-RAHMAN_25384701_cv-library.pdf?alt=media&token=ce3933f7-d339-4465-991d-2f150c5ff74e';
 
 const Header = () => {
   const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <div
-      className='flex w-full items-center justify-between gap-4 px-10 py-4
-                      transition-colors duration-500  dark:bg-gray-900 dark:text-gray-200'
+      className='flex w-full items-center justify-between gap-4 px-10 py-4 transition-colors
+                      duration-500 dark:bg-gray-900 dark:text-gray-200'
     >
       <p className='font-burtons font-alegreya text-2xl font-bold'>Dev Portfolio</p>
+
+      <div className='hidden items-center gap-8 font-alegreya  text-xl font-bold transition-colors duration-500 md:flex'>
+        <button className='transition-all duration-500 hover:text-cyan-500 hover:underline'>
+          Portfolio
+        </button>
+
+        <button className='transition-all duration-500 hover:text-cyan-500 hover:underline'>
+          About
+        </button>
+
+        <button className='transition-all duration-500 hover:text-cyan-500 hover:underline'>
+          Contact
+        </button>
+      </div>
 
       <div className='flex items-center gap-8 '>
         <button onClick={() => toggleDarkMode()}>
@@ -34,10 +50,7 @@ const Header = () => {
         <button
           className='cursor-pointer rounded-sm bg-gradient-to-r from-cyan-500 to-teal-500 px-2 py-1 '
           onClick={() => {
-            window.open(
-              'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/CV%20-%20Mahbubur%20Rahman%20Jan%2026%20V1%20(1).pdf?alt=media&token=6bfa50b9-3c54-41cd-8f74-58253c9420ff',
-              '_blank'
-            );
+            window.open(resumeLink, '_blank');
           }}
         >
           Resume

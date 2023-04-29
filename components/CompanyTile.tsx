@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import CompanyLink from '@/components/CompanyLink';
 
 export default function CompanyTile(props: {
@@ -31,6 +32,7 @@ export default function CompanyTile(props: {
           src={props.image!}
           alt={props.name}
           fill={true}
+          sizes='(min-width: 1024px) 33vw'
           style={{
             objectFit: 'cover',
           }}
