@@ -1,9 +1,12 @@
+'use client';
+
 import Image, { StaticImageData } from 'next/image';
 
 import dotnetLogo from '@/public/dotnet-logo.png';
 import flutterSvg from '@/public/flutterio-icon.svg';
 import vueSvg from '@/public/vuejs-icon.svg';
 import { technologies, Technology } from '@/data/technologies';
+import { motion } from 'framer-motion';
 
 const technologyImages = {
   flutterSvg: flutterSvg as StaticImageData,
@@ -22,11 +25,30 @@ export default function TechnologyList() {
       <p className='pb-4 text-2xl font-medium'>Technologies</p>
 
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
-        {techs.map((tech) => (
-          <div
+        {techs.map((tech, i) => (
+          <motion.div
             className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700 dark:text-gray-200
                        dark:shadow-slate-800'
             key={tech.name}
+            initial={{
+              translateX: -100,
+              translateY: -10,
+              opacity: 0,
+            }}
+            whileInView={{
+              translateX: 0,
+              translateY: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: i * 0.5,
+            }}
+            exit={{
+              translateX: 100,
+              translateY: 10,
+              opacity: 0,
+            }}
           >
             <Image
               src={tech.image}
@@ -52,7 +74,7 @@ export default function TechnologyList() {
                 <p key={techItem}>{techItem}</p>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
