@@ -7,13 +7,13 @@ const Header = () => {
 
   return (
     <div
-      className='flex w-full items-center justify-between gap-4 px-10 py-4
-                      transition-colors duration-500  dark:bg-gray-900 dark:text-gray-200'
+      className='flex w-full items-center justify-between gap-4 px-10 py-4 
+                 transition-colors duration-500  dark:bg-gray-900 dark:text-gray-200'
     >
-      <p className='font-burtons font-alegreya text-2xl font-bold'>Dev Portfolio</p>
+      <p className='font-burtons font-alegreya text-2xl font-bold'>mahbubur.dev</p>
 
       <div className='flex items-center gap-8 '>
-        <button onClick={() => toggleDarkMode()}>
+        <button onClick={toggleDarkMode}>
           <svg
             className='h-5 w-5'
             fill={`${isDarkMode ? 'white' : 'black'}`}

@@ -1,11 +1,5 @@
-import Image from 'next/image';
-
 import CompanyList from '@/components/CompanyList';
-import Disclaimer from '@/components/Disclaimer';
-import PortfolioList from '@/components/PortfolioList';
 import SocialLinks from '@/components/SocialLinks';
-import TechnologyList from '@/components/TechnologyList';
-import profileNoBg from '@/public/profile-nobg.png';
 
 export default function Home() {
   return (
@@ -22,7 +16,7 @@ export default function Home() {
 
       <SocialLinks />
 
-      <div className='mt-10 lg:mt-20'>
+      {/* <div className='mt-10 lg:mt-20'>
         <Image
           src={profileNoBg}
           alt='Profile Image'
@@ -31,54 +25,67 @@ export default function Home() {
           }}
           className='mx-auto my-10 h-80 w-80 rounded-full bg-gradient-to-b from-cyan-600'
         />
-      </div>
+      </div> */}
 
-      <p className='pt-10 text-2xl font-medium'>Experience</p>
+      <section>
+        <ExperienceSection />
+      </section>
 
-      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
-        As a professional developer, I offer a wide range of services to my clients. My expertise
-        includes full-stack web development using technologies such as{' '}
-        <span className='font-medium text-cyan-600'>Vue 3</span> and{' '}
-        <span className='font-medium text-cyan-600'>React</span>, mobile app development using{' '}
-        <span className='font-medium text-cyan-600'>Flutter</span>, API development using{' '}
-        <span className='font-medium text-cyan-600'>.NET Core</span> and{' '}
-        <span className='font-medium text-cyan-600'>NodeJS</span>. I have experience working with
-        agencies and startups on various projects, and I have also worked in the industry as a{' '}
-        <span className='font-medium text-cyan-600'>VueJS</span> and{' '}
-        <span className='font-medium text-cyan-600'>.Net</span> developer. I possess a strong
-        understanding of software development best practices, including{' '}
-        <span className='font-medium text-cyan-600'>Agile methodologies</span> and{' '}
-        <span className='font-medium text-cyan-600'>test-driven development</span>. Additionally, I
-        have worked with <span className='font-medium text-cyan-600'>Firebase</span> and{' '}
-        <span className='font-medium text-cyan-600'>MongoDB</span> databases and have experience
-        with <span className='font-medium text-cyan-600'>geo-queries</span>. I have also led a small
-        team of 2 developers in a startup. I am a highly adaptable developer with the ability to
-        quickly learn new technologies and tools, and I am always looking for ways to improve my
-        skills and stay current with industry trends.
-      </p>
-
-      <p className='text-2xl font-medium'>Leadership Experience</p>
-
-      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
-        I have lead a small team of developers in a startup based in Bangladesh. I have successfully
-        managed the team and delivered the project on time. I hepled junior developers write
-        <span className='font-medium text-cyan-600'> clean </span>
-        and <span className='font-medium text-cyan-600'> maintable </span>
-        code. This experience has helped me develop strong leadership skills and the ability to work
-        well in a team environment.
-      </p>
-
-      <TechnologyList />
+      {/* <TechnologyList /> */}
 
       <CompanyList />
 
-      <div className='mt-32'>
-        <PortfolioList />
-      </div>
+      <section className='mt-32'>{/* <PortfolioList /> */}</section>
 
-      <div className='mt-32'>
-        <Disclaimer />
-      </div>
+      <section className='mt-32'>{/* <Disclaimer /> */}</section>
     </div>
   );
 }
+
+const ExperienceSection = () => {
+  return (
+    <>
+      <p className='pt-10 text-2xl font-medium'>Experince</p>
+
+      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
+        I&apos;m a Full-Stack Software Developer with three years of industry experience. My
+        technical skills span across
+        <span className='font-medium text-cyan-600'> Vue 3</span>,
+        <span className='font-medium text-cyan-600'> React</span>,
+        <span className='font-medium text-cyan-600'> Flutter</span>,
+        <span className='font-medium text-cyan-600'> .NET Core</span>, and
+        <span className='font-medium text-cyan-600'> NodeJS</span>. I have been fortunate to work on
+        various projects, ranging from startups to well-established agencies and industry
+        enterprises. I have also led small teams, advocating for clean, maintainable coding
+        practices, and timely, high-quality software product delivery. Equipped with a strong
+        academic background in Data Science & Analytics and Computer Science & Engineering, I am
+        passionate about keeping myself updated with industry trends and constantly expanding my
+        skill set.
+      </p>
+
+      <p className='pt-10 text-2xl font-medium'>Experience & Leadership</p>
+
+      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
+        My professional journey has been dynamic and varied. I&apos;ve led a small team of
+        developers at a startup in Bangladesh, and I have extensive experience in
+        <span className='font-medium text-cyan-600'> Agile methodologies</span> and
+        <span className='font-medium text-cyan-600'> test-driven development</span>. My database
+        knowledge extends to
+        <span className='font-medium text-cyan-600'> SQL</span>,
+        <span className='font-medium text-cyan-600'> Firestore</span> and
+        <span className='font-medium text-cyan-600'> MongoDB</span>, and I have tackled geo-queries
+        successfully. My leadership style promotes a collaborative team environment and guides
+        junior developers towards writing clean, maintainable code.
+      </p>
+
+      <p className='pt-10 text-2xl font-medium'>Projects & Publications</p>
+
+      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
+        My portfolio includes diverse projects such as the Elvan client restaurant application,
+        Spotlas chat feature, and The Daily Star mobile app. Besides these practical applications, I
+        have also contributed to academic research, authoring papers on Blockchain Technology,
+        Automated Waste Collecting Robot, and Surveillance Drone technology.
+      </p>
+    </>
+  );
+};

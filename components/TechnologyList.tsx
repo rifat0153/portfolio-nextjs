@@ -28,7 +28,7 @@ export default function TechnologyList() {
 
           <p className='pb-2 text-lg font-medium lg:text-2xl'>Flutter</p>
           <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
-            2.5+ years
+            3 years
           </p>
 
           <p className='text-cyan-600'>Flutter Tech I Use</p>
@@ -59,7 +59,7 @@ export default function TechnologyList() {
 
           <p className='pb-2 text-lg font-medium lg:text-2xl'>VueJS</p>
           <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
-            1+ years
+            2 years
           </p>
 
           <p className='text-cyan-600'>Vue Techs I Use</p>
@@ -90,13 +90,13 @@ export default function TechnologyList() {
 
           <p className='pb-2 text-lg font-medium lg:text-2xl'>.Net Core</p>
           <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
-            1+ years
+            2 years
           </p>
 
           <p className='text-cyan-600'>.Net Techs I Use</p>
 
           <div className='font-medium lg:text-lg'>
-            <div>Web API</div>
+            <div>REST API</div>
             <div>EF Core</div>
             <div>xUnit</div>
             <div>Moq</div>
