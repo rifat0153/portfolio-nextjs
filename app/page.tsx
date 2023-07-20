@@ -1,5 +1,11 @@
+import Image from 'next/image';
+
 import CompanyList from '@/components/CompanyList';
+import Disclaimer from '@/components/Disclaimer';
+import PortfolioList from '@/components/PortfolioList';
 import SocialLinks from '@/components/SocialLinks';
+import TechnologyList from '@/components/TechnologyList';
+import profileNoBg from '@/public/profile-nobg.png';
 
 export default function Home() {
   return (
@@ -16,8 +22,9 @@ export default function Home() {
 
       <SocialLinks />
 
-      {/* <div className='mt-10 lg:mt-20'>
+      <div className='mt-10 lg:mt-20'>
         <Image
+          priority={true}
           src={profileNoBg}
           alt='Profile Image'
           style={{
@@ -25,19 +32,23 @@ export default function Home() {
           }}
           className='mx-auto my-10 h-80 w-80 rounded-full bg-gradient-to-b from-cyan-600'
         />
-      </div> */}
+      </div>
 
       <section>
         <ExperienceSection />
       </section>
 
-      {/* <TechnologyList /> */}
+      <TechnologyList />
 
       <CompanyList />
 
-      <section className='mt-32'>{/* <PortfolioList /> */}</section>
+      <section className='mt-32'>
+        <PortfolioList />
+      </section>
 
-      <section className='mt-32'>{/* <Disclaimer /> */}</section>
+      <section className='mt-32'>
+        <Disclaimer />
+      </section>
     </div>
   );
 }
@@ -72,7 +83,7 @@ const ExperienceSection = () => {
         <span className='font-medium text-cyan-600'> test-driven development</span>. My database
         knowledge extends to
         <span className='font-medium text-cyan-600'> SQL</span>,
-        <span className='font-medium text-cyan-600'> Firestore</span> and
+        <span className='font-medium text-cyan-600'> Firest</span> and
         <span className='font-medium text-cyan-600'> MongoDB</span>, and I have tackled geo-queries
         successfully. My leadership style promotes a collaborative team environment and guides
         junior developers towards writing clean, maintainable code.
