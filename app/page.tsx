@@ -12,24 +12,26 @@ export default function Home() {
     <div className='mx-auto w-full max-w-5xl px-4 pb-40 dark:text-gray-200'>
       <div className='py-10 text-center'>
         <p className='text-5xl font-medium text-cyan-600 '>Mahbubur Rahman</p>
-        <p className='mt-2 text-2xl dark:text-gray-100'>Typescript, Dart and C# Developer </p>
-        <p className='mt-5 text-md leading-8 text-gray-800 dark:text-gray-300'>
-          I am a versatile developer with 2+ years of experience in Typescript, C#, Dart, VueJs,
-          .Net Core, and Flutter. Strong in both front-end and back-end development, with a proven
+        <p className='mt-4 text-2xl dark:text-gray-100'>Typescript, Dart and C# Developer </p>
+        <p className='mt-4 text-md leading-8 text-gray-800 dark:text-gray-300'>
+          I am a versatile developer with 3 years of experience in Typescript, C#, Dart, VueJs, .Net
+          Core, and Flutter. Strong in both front-end and back-end development, with a proven
           ability to deliver high-quality solutions.
         </p>
       </div>
 
       <SocialLinks />
 
-      <Image
-        src={profileNoBg}
-        alt='Profile Image'
-        style={{
-          objectFit: 'contain',
-        }}
-        className='mx-auto my-10 h-80 w-80 rounded-full bg-gradient-to-b from-cyan-600'
-      />
+      <div className='mt-10 lg:mt-20'>
+        <Image
+          src={profileNoBg}
+          alt='Profile Image'
+          style={{
+            objectFit: 'contain',
+          }}
+          className='mx-auto my-10 h-80 w-80 rounded-full bg-gradient-to-b from-cyan-600'
+        />
+      </div>
 
       <p className='pt-10 text-2xl font-medium'>Experience</p>
 

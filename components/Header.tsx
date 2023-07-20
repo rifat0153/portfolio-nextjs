@@ -1,7 +1,6 @@
 'use client';
 
 import { useDarkMode } from '@/hooks/useDarkMode';
-import React from 'react';
 
 const Header = () => {
   const [isDarkMode, toggleDarkMode] = useDarkMode();

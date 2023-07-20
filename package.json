@@ -1,9 +1,9 @@
 {
-  "name": "portfolio-nextjs",
+  "name": "mahbubur-rahman-portfolio-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "preview": "next start -p 8080",

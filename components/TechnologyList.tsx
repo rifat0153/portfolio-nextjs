@@ -1,8 +1,8 @@
-import Image from "next/image"
+import Image from 'next/image';
 
+import dotnetLogo from '@/public/dotnet-logo.png';
 import flutterSvg from '@/public/flutterio-icon.svg';
 import vueSvg from '@/public/vuejs-icon.svg';
-import dotnetLogo from '@/public/dotnet-logo.png';
 
 export default function TechnologyList() {
   return (
@@ -14,7 +14,8 @@ export default function TechnologyList() {
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700 dark:text-gray-200
                      dark:shadow-slate-800'
         >
-          <Image src={flutterSvg}
+          <Image
+            src={flutterSvg}
             width={300}
             height={300}
             alt='Flutter Image'
@@ -25,18 +26,18 @@ export default function TechnologyList() {
             className='mx-auto my-2 rounded-full p-10'
           />
 
-          <p className="text-lg lg:text-2xl pb-2 font-medium">Flutter</p>
-          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>2.5+ years</p>
+          <p className='pb-2 text-lg font-medium lg:text-2xl'>Flutter</p>
+          <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
+            2.5+ years
+          </p>
 
           <p className='text-cyan-600'>Flutter Tech I Use</p>
 
-          <div
-            className="lg:text-lg font-medium"
-          >
-            <p >Riverpod</p>
-            <p >Firebase</p>
-            <p >Freezed</p>
-            <p >Local Packages</p>
+          <div className='font-medium lg:text-lg'>
+            <p>Riverpod</p>
+            <p>Firebase</p>
+            <p>Freezed</p>
+            <p>Local Packages</p>
           </div>
         </div>
 
@@ -44,7 +45,8 @@ export default function TechnologyList() {
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700
                     dark:text-gray-200 dark:shadow-slate-800'
         >
-          <Image src={vueSvg}
+          <Image
+            src={vueSvg}
             width={300}
             height={300}
             alt='VueJs Image'
@@ -55,14 +57,14 @@ export default function TechnologyList() {
             className='mx-auto my-2 rounded-full p-10'
           />
 
-          <p className="text-lg lg:text-2xl pb-2 font-medium">VueJS</p>
-          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>1+ years</p>
+          <p className='pb-2 text-lg font-medium lg:text-2xl'>VueJS</p>
+          <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
+            1+ years
+          </p>
 
           <p className='text-cyan-600'>Vue Techs I Use</p>
 
-          <div
-            className="lg:text-lg font-medium"
-          >
+          <div className='font-medium lg:text-lg'>
             <div>Composable</div>
             <div>Tailwind</div>
             <div>Pinia</div>
@@ -74,7 +76,8 @@ export default function TechnologyList() {
           className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700
                     dark:text-gray-200 dark:shadow-slate-800'
         >
-          <Image src={dotnetLogo}
+          <Image
+            src={dotnetLogo}
             width={300}
             height={300}
             alt='Dotnet Core Image'
@@ -85,14 +88,14 @@ export default function TechnologyList() {
             className='mx-auto my-2 rounded-full p-10'
           />
 
-          <p className="text-lg lg:text-2xl pb-2 font-medium">.Net Core</p>
-          <p className='text-sm lg:text-md text-gray-500 dark:text-gray-400 pb-4 lg:pb-8'>1+ years</p>
+          <p className='pb-2 text-lg font-medium lg:text-2xl'>.Net Core</p>
+          <p className='pb-4 text-sm text-gray-500 dark:text-gray-400 lg:pb-8 lg:text-md'>
+            1+ years
+          </p>
 
           <p className='text-cyan-600'>.Net Techs I Use</p>
 
-          <div
-            className="lg:text-lg font-medium"
-          >
+          <div className='font-medium lg:text-lg'>
             <div>Web API</div>
             <div>EF Core</div>
             <div>xUnit</div>
