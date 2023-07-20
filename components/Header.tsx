@@ -34,7 +34,7 @@ const Header = () => {
           className='cursor-pointer rounded-sm bg-gradient-to-r from-cyan-500 to-teal-500 px-2 py-1 '
           onClick={() => {
             window.open(
-              'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/CV%20-%20Mahbubur%20Rahman%20Jan%2026%20V1%20(1).pdf?alt=media&token=6bfa50b9-3c54-41cd-8f74-58253c9420ff',
+              'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20CV%20%2BCover%20Letter.pdf?alt=media&token=95f1a855-0573-4de6-befe-9eb00cba289f',
               '_blank'
             );
           }}
