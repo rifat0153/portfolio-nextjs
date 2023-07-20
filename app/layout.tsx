@@ -2,15 +2,14 @@
 
 import { AnalyticsWrapper } from '@/components/analytics';
 import Header from '@/components/Header';
-import { useDarkMode } from '@/hooks/useDarkMode';
-import { Alegreya, Inter } from '@next/font/google';
+import { Alegreya, Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const alegreya = Alegreya({ subsets: ['latin'], variable: '--font-alegreya' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [darkMode, toggleDarkMode] = useDarkMode();
+  // const [darkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <html lang='en'>
@@ -23,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`
         transition-colors duration-1000
-        ${darkMode ? 'dark' : ''}
+        ${false ? 'dark' : ''}
         ${alegreya.variable} ${inter.variable} font-sans`}
       >
         <nav>
@@ -32,7 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main className='transition-colors duration-500 dark:bg-gray-900'>{children}</main>
 
-        <AnalyticsWrapper />
+        {/* only add the analytics component in production */}
+        {process.env.NODE_ENV === 'production' && <AnalyticsWrapper />}
       </body>
     </html>
   );
