@@ -58,7 +58,7 @@ const ExperienceSection = () => {
     <>
       <p className='pt-10 text-2xl font-medium'>Experince</p>
 
-      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
+      <p className='pt-2 pb-10 text-base leading-8 lg:pb-10'>
         I&apos;m a Full-Stack Software Developer with three years of industry experience. My
         technical skills span across
         <span className='font-medium text-cyan-600'> Vue 3</span>,
@@ -76,14 +76,14 @@ const ExperienceSection = () => {
 
       <p className='pt-10 text-2xl font-medium'>Experience & Leadership</p>
 
-      <p className='pt-2 pb-10 text-base leading-8 lg:pb-20'>
+      <p className='pt-2 pb-10 text-base leading-8 lg:pb-10'>
         My professional journey has been dynamic and varied. I&apos;ve led a small team of
         developers at a startup in Bangladesh, and I have extensive experience in
         <span className='font-medium text-cyan-600'> Agile methodologies</span> and
         <span className='font-medium text-cyan-600'> test-driven development</span>. My database
         knowledge extends to
         <span className='font-medium text-cyan-600'> SQL</span>,
-        <span className='font-medium text-cyan-600'> Firest</span> and
+        <span className='font-medium text-cyan-600'> Firestore</span> and
         <span className='font-medium text-cyan-600'> MongoDB</span>, and I have tackled geo-queries
         successfully. My leadership style promotes a collaborative team environment and guides
         junior developers towards writing clean, maintainable code.

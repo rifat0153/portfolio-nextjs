@@ -6,7 +6,8 @@ import dotnetLogo from '@/public/dotnet-logo.png';
 import flutterSvg from '@/public/flutterio-icon.svg';
 import vueSvg from '@/public/vuejs-icon.svg';
 import { technologies, Technology } from '@/data/technologies';
-import { motion } from 'framer-motion';
+import { motion, m } from 'framer-motion';
+import { useState } from 'react';
 
 const technologyImages = {
   flutterSvg: flutterSvg as StaticImageData,
@@ -20,6 +21,28 @@ const techs: Technology[] = technologies.map((tech: any) => ({
 }));
 
 export default function TechnologyList() {
+  const [animationComplete, setAnimationComplete] = useState(false);
+
+  const [variants, setVariants] = useState<{
+    [key: string]: object;
+  }>({
+    initial: {
+      translateX: -100,
+      translateY: -10,
+      opacity: 0,
+    },
+    animate: {
+      translateX: 0,
+      translateY: 0,
+      opacity: 1,
+    },
+    exit: {
+      translateX: 100,
+      translateY: 10,
+      opacity: 0,
+    },
+  });
+
   return (
     <div className='pb-10 dark:text-gray-200 lg:pb-40'>
       <p className='pb-4 text-2xl font-medium'>Technologies</p>
@@ -30,24 +53,25 @@ export default function TechnologyList() {
             className='rounded-md py-4 text-center font-medium text-black shadow-lg dark:bg-slate-700 dark:text-gray-200
                        dark:shadow-slate-800'
             key={tech.name}
-            initial={{
-              translateX: -100,
-              translateY: -10,
-              opacity: 0,
+            onAnimationEnd={() => {
+              console.log('Animation ended');
             }}
-            whileInView={{
-              translateX: 0,
-              translateY: 0,
-              opacity: 1,
+            onAnimationComplete={() => {
+              console.log('Animation completed for ' + tech.name);
+
+              if (i === techs.length - 1) {
+                setAnimationComplete(true);
+
+                setVariants({});
+              }
             }}
+            variants={variants}
+            initial='initial'
+            whileInView='animate'
+            exit='exit'
             transition={{
               duration: 0.5,
               delay: i * 0.5,
-            }}
-            exit={{
-              translateX: 100,
-              translateY: 10,
-              opacity: 0,
             }}
           >
             <Image

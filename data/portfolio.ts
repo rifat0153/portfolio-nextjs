@@ -13,7 +13,7 @@ export type Portfolio = {
     appstoreLink: string;
     playstoreLink: string;
   };
-  themeColor?: string;
+  classes?: string;
 };
 
 export const portfolios: Portfolio[] = [
@@ -25,7 +25,7 @@ export const portfolios: Portfolio[] = [
       appstoreLink: 'https://apps.apple.com/gb/app/spotlas/id1464125251',
       playstoreLink: 'https://play.google.com/store/apps/details?id=co.uk.wotspot.indigo.ios.stage',
     },
-    themeColor: 'pink',
+    classes: 'from-pink-700 to-pink-500 border-pink-300',
   },
   {
     name: 'Spotlas',
@@ -36,7 +36,7 @@ export const portfolios: Portfolio[] = [
       appstoreLink: 'https://apps.apple.com/gb/app/spotlas/id1464125251',
       playstoreLink: 'https://play.google.com/store/apps/details?id=co.uk.wotspot.indigo.ios.stage',
     },
-    themeColor: 'pink',
+    classes: 'from-pink-700 to-pink-500 border-pink-300',
   },
   {
     name: 'Daily Star',
@@ -48,6 +48,6 @@ export const portfolios: Portfolio[] = [
       playstoreLink:
         'https://play.google.com/store/apps/details?id=com.mcc.thedailystar&hl=en_US&gl=US',
     },
-    themeColor: 'blue',
+    classes: 'from-blue-700 to-blue-500 border-blue-300',
   },
 ];
