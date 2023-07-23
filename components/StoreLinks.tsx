@@ -2,30 +2,59 @@
 
 import GooglePlayIcon from '@/components/icons/GooglePlayIcon';
 import AppStoreIcon from '@/components/icons/AppStoreIcon';
+import GithubIcon from './icons/GithubIcon';
 
-function StoreLinks(props: { playstoreLink?: string; appstoreLink?: string }) {
+function StoreLinks(props: { playstoreLink?: string; appstoreLink?: string; githubLink?: string }) {
   return (
     <div className='flex justify-center gap-8'>
-      <div className='h-10 w-10'>
-        <button
-          onClick={() => {
-            window.open(props.playstoreLink, '_blank');
-          }}
-        >
+      {props.githubLink}
+      {
+        // If playstoreLink is not provided, don't render the button
+        props.playstoreLink && (
           <div className='h-10 w-10'>
-            <GooglePlayIcon />
+            <button
+              onClick={() => {
+                window.open(props.playstoreLink, '_blank');
+              }}
+            >
+              <div className='h-10 w-10'>
+                <GooglePlayIcon />
+              </div>
+            </button>
           </div>
-        </button>
-      </div>
-      <button
-        onClick={() => {
-          window.open(props.appstoreLink, '_blank');
-        }}
-      >
-        <div className='h-10 w-10'>
-          <AppStoreIcon />
-        </div>
-      </button>
+        )
+      }
+
+      {
+        // If appstoreLink is not provided, don't render the button
+
+        props.appstoreLink && (
+          <button
+            onClick={() => {
+              window.open(props.appstoreLink, '_blank');
+            }}
+          >
+            <div className='h-10 w-10'>
+              <AppStoreIcon />
+            </div>
+          </button>
+        )
+      }
+
+      {
+        // If githubLink is not provided, don't render the button
+        props.githubLink && (
+          <button
+            onClick={() => {
+              window.open(props.githubLink, '_blank');
+            }}
+          >
+            <div className='h-10 w-10'>
+              <GithubIcon />
+            </div>
+          </button>
+        )
+      }
     </div>
   );
 }

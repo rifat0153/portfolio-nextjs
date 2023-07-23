@@ -11,8 +11,7 @@ export default function Disclaimer() {
       <p className='pb-4 text-sm text-gray-500 dark:text-gray-400'>
         This website is a personal portfolio website and is a WIP. My motivation for creating this
         website is to showcase my skills and experience as a developer. I am not a professional
-        designer, so the design of this website is not the best. I am also not a professional
-        writer,
+        designer, so the design of this website is not the best.
       </p>
     </>
   );

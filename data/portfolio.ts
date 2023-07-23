@@ -26,8 +26,7 @@ export const portfolios: Portfolio[] = [
       'Elvan is a comprehensive restaurant management app that serves both customers and administrators. It allows customers to conveniently order food, while providing restaurant administrators with a powerful dashboard for managing orders.',
     images: [elvan1, elvan2],
     links: {
-      appstoreLink: 'https://apps.apple.com/gb/app/spotlas/id1464125251',
-      playstoreLink: 'https://play.google.com/store/apps/details?id=co.uk.wotspot.indigo.ios.stage',
+      githubLink: 'asd',
     },
     classes: 'from-pink-700 to-pink-500 border-pink-300',
   },
