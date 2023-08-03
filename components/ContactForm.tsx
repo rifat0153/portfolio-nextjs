@@ -11,9 +11,9 @@ export type IContactForm = {
 };
 
 export default function ContactForm() {
-  const [name, setName] = useState('admin');
-  const [email, setEmail] = useState('admin@gmail.com');
-  const [message, setMessage] = useState('hey there!');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
   const veirfyUserInput = () => {
