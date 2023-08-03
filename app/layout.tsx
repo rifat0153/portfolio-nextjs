@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body
         className={`
-        transition-colors duration-1000
+        w-full transition-colors duration-1000
         ${false ? 'dark' : ''}
         ${alegreya.variable} ${inter.variable} font-sans`}
       >
@@ -29,7 +29,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
         </nav>
 
-        <main className='transition-colors duration-500 dark:bg-gray-900'>{children}</main>
+        <main className='w-full transition-colors duration-500 dark:bg-gray-900'>
+          <div className='mx-auto w-full max-w-5xl'>{children}</div>
+        </main>
 
         {/* only add the analytics component in production */}
         {process.env.NODE_ENV === 'production' && <AnalyticsWrapper />}

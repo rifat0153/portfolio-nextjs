@@ -6,7 +6,7 @@ import dotnetLogo from '@/public/dotnet-logo.png';
 import flutterSvg from '@/public/flutterio-icon.svg';
 import vueSvg from '@/public/vuejs-icon.svg';
 import { technologies, Technology } from '@/data/technologies';
-import { motion, m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const technologyImages = {
@@ -21,9 +21,7 @@ const techs: Technology[] = technologies.map((tech: any) => ({
 }));
 
 export default function TechnologyList() {
-  const [animationComplete, setAnimationComplete] = useState(false);
-
-  const [variants, setVariants] = useState<{
+  const [variants] = useState<{
     [key: string]: object;
   }>({
     initial: {
@@ -58,12 +56,6 @@ export default function TechnologyList() {
             }}
             onAnimationComplete={() => {
               console.log('Animation completed for ' + tech.name);
-
-              if (i === techs.length - 1) {
-                setAnimationComplete(true);
-
-                setVariants({});
-              }
             }}
             variants={variants}
             initial='initial'

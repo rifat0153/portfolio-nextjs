@@ -9,7 +9,7 @@ import profileNoBg from '@/public/profile-nobg.png';
 
 export default function Home() {
   return (
-    <div className='mx-auto w-full max-w-5xl px-4 pb-40 dark:text-gray-200'>
+    <div className='px-4 pb-40 dark:text-gray-200'>
       <div className='py-10 text-center'>
         <p className='text-5xl font-medium text-cyan-600 '>Mahbubur Rahman</p>
         <p className='mt-4 text-2xl dark:text-gray-100'>Typescript, Dart and C# Developer </p>
