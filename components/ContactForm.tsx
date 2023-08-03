@@ -16,10 +16,24 @@ export default function ContactForm() {
   const [message, setMessage] = useState('hey there!');
   const [loading, setLoading] = useState(false);
 
+  const veirfyUserInput = () => {
+    if (name === '' || email === '' || message === '') {
+      return false;
+    }
+
+    return true;
+  };
+
   const messagesCollectionRef = collection(useFirestore(), 'messages');
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // TODO: add react form validaiton woth Zod
+    if (!veirfyUserInput()) {
+      console.log('Please fill out all fields');
+      return;
+    }
 
     setLoading(true);
 
