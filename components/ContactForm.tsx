@@ -3,61 +3,106 @@
 import { useState } from 'react';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import { useFirestore } from 'reactfire';
+import { z } from 'zod';
 
-export type IContactForm = {
-  email: string;
-  name: string;
-  message: string;
-};
+const contactFormSchema = z.object({
+  email: z.string().email('Please enter a valid email address'),
+  name: z
+    .string()
+    .min(2, 'Name must be between 2 and 50 characters')
+    .max(50, 'Name must be between 2 and 50 characters'),
+  message: z
+    .string()
+    .min(2, 'Message must be between 2 and 500 characters')
+    .max(500, 'Message must be between 2 and 500 characters')
+    .refine((message) => message.trim().length > 0, {
+      message: 'Message cannot be empty',
+    }),
+});
+
+// eslint-disable-next-line no-unused-vars
+type ContactForm = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isFormDataSent, setIsFormDataSent] = useState(false);
+
+  const [formData, setFormData] = useState<ContactForm>({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [formDataError, setFormDataError] = useState<{
+    name: string[];
+    email: string[];
+    message: string[];
+  }>({
+    name: [],
+    email: [],
+    message: [],
+  });
 
   const veirfyUserInput = () => {
-    if (name === '' || email === '' || message === '') {
-      return false;
+    const result = contactFormSchema.safeParse(formData);
+    console.log(result);
+
+    if (result.success) {
+      setFormDataError({
+        name: [],
+        email: [],
+        message: [],
+      });
+
+      return true;
     }
 
-    return true;
+    setFormDataError({
+      name: result.error.issues
+        .filter((issue) => issue.path[0] === 'name')
+        .map((issue) => issue.message),
+      email: result.error.issues
+        .filter((issue) => issue.path[0] === 'email')
+        .map((issue) => issue.message),
+      message: result.error.issues
+        .filter((issue) => issue.path[0] === 'message')
+        .map((issue) => issue.message),
+    });
+
+    return false;
   };
 
   const messagesCollectionRef = collection(useFirestore(), 'messages');
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
-    // TODO: add react form validaiton woth Zod
     if (!veirfyUserInput()) {
       console.log('Please fill out all fields');
+
+      setLoading(false);
+
       return;
     }
 
-    setLoading(true);
-
-    const messageData: IContactForm = {
-      name: name,
-      email: email,
-      message: message,
-    };
-
-    // Reference to the specific document with the email as the ID
-    const messageDocRef = doc(messagesCollectionRef, email);
-
-    // Set the data to the specific document
     try {
-      await setDoc(messageDocRef, messageData);
-      console.log('Message submitted successfully');
+      // Reference to the specific document with the email as the ID
+      const messageDocRef = doc(messagesCollectionRef, formData.email);
+      // Set the data to the specific document
+      await setDoc(messageDocRef, formData);
+
+      setIsFormDataSent(true);
 
       //   artificial delay
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       // Clear the form
-      setName('');
-      setEmail('');
-      setMessage('');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
     } catch (error) {
       console.error('Error submitting message:', error);
     }
@@ -67,8 +112,6 @@ export default function ContactForm() {
 
   return (
     <>
-      {loading && <p>loading...</p>}
-
       <ContactFormWrapper>
         <form onSubmit={onSubmit} className='mx-auto max-w-md'>
           <div>
@@ -76,7 +119,7 @@ export default function ContactForm() {
           </div>
           <div className='divide-y divide-gray-200'>
             <div className='space-y-4 py-8 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7'>
-              <div className='relative'>
+              <div className='relative pb-4'>
                 <input
                   disabled={loading}
                   autoComplete='off'
@@ -85,8 +128,8 @@ export default function ContactForm() {
                   type='text'
                   className='focus:borer-rose-600 peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none'
                   placeholder='Name'
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
                 <label
                   htmlFor='name'
@@ -94,8 +137,14 @@ export default function ContactForm() {
                 >
                   Name
                 </label>
+                {formDataError.name.map((error, idx) => (
+                  <p key={idx} className='text-sm text-red-500'>
+                    {error}
+                  </p>
+                ))}
               </div>
-              <div className='relative'>
+
+              <div className='relative pb-4'>
                 <input
                   disabled={loading}
                   autoComplete='off'
@@ -104,8 +153,8 @@ export default function ContactForm() {
                   type='email'
                   className='focus:borer-rose-600 peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none'
                   placeholder='Email'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
                 <label
                   htmlFor='email'
@@ -113,8 +162,14 @@ export default function ContactForm() {
                 >
                   Email
                 </label>
+                {formDataError.email.map((error, idx) => (
+                  <p key={idx} className='text-sm text-red-500'>
+                    {error}
+                  </p>
+                ))}
               </div>
-              <div className='relative'>
+
+              <div className='relative pb-4'>
                 <textarea
                   disabled={loading}
                   autoComplete='off'
@@ -123,8 +178,8 @@ export default function ContactForm() {
                   rows={5}
                   className='focus:borer-rose-600 peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none'
                   placeholder='Please write your message here...'
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
                 <label
                   htmlFor='message'
@@ -132,6 +187,11 @@ export default function ContactForm() {
                 >
                   Message
                 </label>
+                {formDataError.message.map((error, idx) => (
+                  <p key={idx} className='text-sm text-red-500'>
+                    {error}
+                  </p>
+                ))}
               </div>
               <div className='relative'>
                 <button disabled={loading} className='rounded-md bg-blue-500 px-2 py-1 text-white'>
@@ -141,6 +201,13 @@ export default function ContactForm() {
             </div>
           </div>
         </form>
+
+        {isFormDataSent && (
+          <div className='text-center'>
+            <h1 className='text-2xl font-semibold'>Thank you for your message!</h1>
+            <p className='text-lg'>I will get back to you as soon as possible.</p>
+          </div>
+        )}
       </ContactFormWrapper>
     </>
   );
@@ -148,11 +215,11 @@ export default function ContactForm() {
 
 function ContactFormWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className='flex min-h-screen flex-col justify-center bg-gray-100 py-6 sm:py-12'>
+    <div className='flex min-h-screen flex-col justify-center  py-6 sm:py-12'>
       <div className='relative py-3 sm:mx-auto sm:max-w-xl'>
-        <div className='absolute inset-0 -skew-y-6 transform bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg sm:-rotate-6 sm:skew-y-0 sm:rounded-3xl'></div>
-        <div className='relative bg-white px-4 py-10 shadow-lg sm:rounded-3xl sm:p-20'>
-          <div className='mx-auto max-w-md'>{children}</div>
+        <div className='absolute inset-0 -skew-y-6 transform bg-gradient-to-r from-blue-300 to-blue-600 shadow-2xl sm:-rotate-6 sm:skew-y-0 sm:rounded-3xl'></div>
+        <div className='relative bg-white px-4 py-10 shadow-2xl sm:rounded-3xl sm:p-20'>
+          <div className='mx-auto max-w-md '>{children}</div>
         </div>
       </div>
     </div>

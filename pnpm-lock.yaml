@@ -32,6 +32,9 @@ dependencies:
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
+  zod:
+    specifier: ^3.21.4
+    version: 3.21.4
 
 devDependencies:
   '@next/eslint-plugin-next':
@@ -90,7 +93,7 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.9
+      '@jridgewell/trace-mapping': 0.3.18
     dev: false
 
   /@babel/code-frame@7.22.5:
@@ -2158,6 +2161,7 @@ packages:
   /@jridgewell/resolve-uri@3.1.1:
     resolution: {integrity: sha512-dSYZh7HhCDtCKm4QakX0xFpsRDqjjtZf/kjI/v3T3Nwt5r8/qz/M19F9ySyOqU94SXBmeG9ttTul+YnR4LOxFA==}
     engines: {node: '>=6.0.0'}
+    dev: true
 
   /@jridgewell/set-array@1.1.2:
     resolution: {integrity: sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==}
@@ -2168,7 +2172,7 @@ packages:
     resolution: {integrity: sha512-UTYAUj/wviwdsMfzoSJspJxbkH5o1snzwX0//0ENX1u/55kkZZkcTZP6u9bwKGkv+dkk9at4m1Cpt0uY80kcpQ==}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.9
+      '@jridgewell/trace-mapping': 0.3.18
     dev: false
 
   /@jridgewell/sourcemap-codec@1.4.14:
@@ -2190,6 +2194,7 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /@next/env@13.4.0:
     resolution: {integrity: sha512-LKofmUuxwGXk2OZJSSJ2SlJE62s6z+56aRsze7chc5TPoVouLR9liTiSWxzYuVzuxk0ui2wtIjyR2tcgS1dIyw==}
@@ -2421,7 +2426,7 @@ packages:
       node-stream-zip: 1.15.0
       ora: 5.4.1
       prompts: 2.4.2
-      semver: 6.3.0
+      semver: 6.3.1
       strip-ansi: 5.2.0
       sudo-prompt: 9.2.1
       wcwidth: 1.0.1
@@ -2518,7 +2523,7 @@ packages:
       node-fetch: 2.6.12
       open: 6.4.0
       ora: 5.4.1
-      semver: 6.3.0
+      semver: 6.3.1
       shell-quote: 1.8.1
     transitivePeerDependencies:
       - encoding
@@ -2551,7 +2556,7 @@ packages:
       fs-extra: 8.1.0
       graceful-fs: 4.2.11
       prompts: 2.4.2
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - '@babel/core'
       - bufferutil
@@ -6528,7 +6533,7 @@ packages:
     dependencies:
       object-assign: 4.1.1
       react: 18.2.0
-      react-is: 16.13.1
+      react-is: 18.2.0
     dev: false
 
   /react@18.2.0:
@@ -6773,6 +6778,7 @@ packages:
   /semver@6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
+    dev: true
 
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
