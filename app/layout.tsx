@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <NextUIProvider>
           <div className='w-full'>
-            <div className='mx-auto max-w-5xl'>
+            <div className='mx-auto max-w-6xl'>
               <nav>
                 <Header />
               </nav>

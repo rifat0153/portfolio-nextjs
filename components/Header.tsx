@@ -6,10 +6,14 @@ const Header = () => {
     'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20Dev%20CV%20%2B%20Cover%20Letter.pdf?alt=media&token=71954561-4d50-48a2-bd64-35060cdb62f0';
 
   return (
-    <div className='relative flex w-full items-center justify-center py-2'>
-      <Link href='/' className='absolute left-2 font-bold'>
-        &lt;&gt; Mahbubur Rahman
-      </Link>
+    <div className='flex w-full items-center justify-between py-2'>
+      <div>
+        <Link href='/' className='flex items-center font-bold'>
+          <Icon icon='icon-park:left' />
+          <Icon icon='icon-park:right' />
+          &nbsp; Mahbubur Rahman
+        </Link>
+      </div>
 
       <div className='flex items-center justify-center gap-10'>
         <Link href='/skills' className='flex items-center gap-2'>
@@ -33,7 +37,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className='absolute right-2 flex items-center justify-center gap-2'>
+      <div className='flex items-center justify-center gap-2'>
         <Link href='/search'>
           <Icon icon='material-symbols:search' fontSize={22} />
         </Link>
