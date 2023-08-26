@@ -1,7 +1,6 @@
-'use client';
-
-import { ReactNode, useState, useEffect, useRef } from 'react';
+import React, { ReactNode, useState, useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface CarouselProps<T> {
   items: T[];
@@ -15,8 +14,8 @@ export function Carousel<T>({
   items,
   renderItem,
   autoplayInterval = 3000,
-  prevIcon = <Icon icon='ic:baseline-arrow-back' fontSize={20} />, // Default icon
-  nextIcon = <Icon icon='ic:baseline-arrow-forward' fontSize={20} />, // Default icon
+  prevIcon = <Icon icon='ic:baseline-arrow-back' fontSize={20} />,
+  nextIcon = <Icon icon='ic:baseline-arrow-forward' fontSize={20} />,
 }: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
@@ -46,7 +45,7 @@ export function Carousel<T>({
   };
 
   return (
-    <div className='relative h-full w-full'>
+    <div className='relative h-full w-full overflow-hidden'>
       <button onClick={handlePrev} className='absolute inset-y-0 left-2 '>
         {prevIcon}
       </button>
@@ -55,11 +54,26 @@ export function Carousel<T>({
         {nextIcon}
       </button>
 
-      {items.map((item, index) => (
-        <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
-          {renderItem(item)}
-        </div>
-      ))}
+      <div
+        className='flex h-full w-full'
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        <AnimatePresence initial={false}>
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              className='h-full w-full'
+              style={{ display: `${index === currentIndex ? 'block' : 'none'}` }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3 }}
+            >
+              {renderItem(item)}
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
