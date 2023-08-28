@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 const Header = () => {
   const resumeLink =
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20Dev%20CV%20%2B%20Cover%20Letter.pdf?alt=media&token=71954561-4d50-48a2-bd64-35060cdb62f0';
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20CV.pdf?alt=media&token=64bbfa05-8620-4e18-982e-64976d7005fa';
 
   return (
     <div className='flex w-full items-center justify-between py-2'>
@@ -31,7 +31,7 @@ const Header = () => {
           <p>Experiences</p>
         </Link>
 
-        <Link href={resumeLink} className='flex items-center gap-2'>
+        <Link href={resumeLink} className='flex items-center gap-2' target='_blank'>
           <Icon icon='bx:file' />
           <p>Resume</p>
         </Link>

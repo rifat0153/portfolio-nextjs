@@ -3,51 +3,7 @@
 import { Icon } from '@iconify/react';
 import { Carousel } from './Corousel';
 import Link from 'next/link';
-
-export interface Skill {
-  name: string;
-  icon: string;
-  url: string;
-}
-
-const softwareSkills: Skill[] = [
-  {
-    name: 'C#',
-    icon: 'devicon:csharp',
-    url: 'https://www.example.com/javascript',
-  },
-  {
-    name: '.Net',
-    icon: 'devicon:dot-net',
-    url: 'https://www.example.com/javascript',
-  },
-  {
-    name: 'Typescript',
-    icon: 'devicon:typescript',
-    url: 'https://www.example.com/javascript',
-  },
-  {
-    name: 'JavaScript',
-    icon: 'devicon:javascript',
-    url: 'https://www.example.com/javascript',
-  },
-  {
-    name: 'Vue.js',
-    icon: 'devicon:vuejs',
-    url: 'https://www.example.com/react',
-  },
-  {
-    name: 'React',
-    icon: 'devicon:react',
-    url: 'https://www.example.com/react',
-  },
-  {
-    name: 'Flutter',
-    icon: 'devicon:flutter',
-    url: 'https://www.example.com/nodejs',
-  },
-  // Add more software skills here
-];
+import { softwareSkills } from '@/app/skills/skills';
 
 export function SkillsCarousel() {
   return (
