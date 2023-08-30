@@ -1,37 +1,66 @@
+import { ExperienceIDType, experienceIDs } from '../experiences/experinces';
+import { ProjectIDType, projectIDs } from '../projects/projects';
+
+export const skillIDs = {
+  CSHARP: 'csharp',
+  DOTNET: 'dotnet',
+  TYPESCRIPT: 'typescript',
+  JAVASCRIPT: 'javascript',
+  VUEJS: 'vuejs',
+  NEXTJS: 'nextjs',
+  FLUTTER: 'flutter',
+  DART: 'dart',
+  REACT: 'react',
+  AZURE: 'azure',
+} as const;
+
+export type SkillIDType = (typeof skillIDs)[keyof typeof skillIDs];
+
 export interface Skill {
+  id: SkillIDType;
   name: string;
   icon: string;
   url: string;
   description?: string;
   tags: string[];
+  associatedExperiences?: ExperienceIDType[];
+  associatedProjects?: ProjectIDType[];
 }
 
 export const softwareSkills: Skill[] = [
   {
+    id: skillIDs.CSHARP,
     name: 'C-Sharp',
     icon: 'devicon:csharp',
     description:
       'Throughout my career, I’ve heavily leaned on C# for backend development. This expertise has been instrumental in creating robust systems, especially in tandem with .Net Core. My work on the anomaly detection system for Network Rail stands as a testament to my capabilities with C#.',
     url: 'https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
     tags: ['Backend', 'Network Rail', 'Anomaly Detection', '.Net Core'],
+    associatedExperiences: [experienceIDs.Senceive],
+    associatedProjects: [projectIDs.ANOMALY_DETECTION],
   },
   {
+    id: skillIDs.DOTNET,
     name: '.Net',
     icon: 'devicon:dot-net',
     description:
       '.NET Core reflects my prowess in backend development. I’ve used it to craft robust solutions, such as the system for Network Rail, ensuring they’re both high-performing and scalable.',
     url: 'https://dotnet.microsoft.com/en-us/',
     tags: ['Backend', 'Network Rail', 'High-Performance', 'Scalable'],
+    associatedExperiences: [experienceIDs.Senceive],
   },
   {
+    id: skillIDs.TYPESCRIPT,
     name: 'Typescript',
     icon: 'devicon:typescript',
     description:
       'Integrating TypeScript with tools like React and Vue.js, I’ve ensured my applications are type-safe and efficient. It’s not just about writing code; it’s about writing scalable and maintainable code, and TypeScript helps me achieve that.',
     url: 'https://www.typescriptlang.org/',
     tags: ['Type-safe', 'Efficient', 'React', 'Vue.js', 'Scalable', 'Maintainable'],
+    associatedExperiences: [experienceIDs.Senceive, experienceIDs.ElvanAB, experienceIDs.RsiLab],
   },
   {
+    id: skillIDs.JAVASCRIPT,
     name: 'JavaScript',
     icon: 'devicon:javascript',
     description:
@@ -40,6 +69,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Dynamic', 'Interactive', 'React', 'Vue.js', 'Next.js', 'Efficiency'],
   },
   {
+    id: skillIDs.VUEJS,
     name: 'Vue.js',
     icon: 'devicon:vuejs',
     description:
@@ -48,6 +78,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Frontend', 'Vue 3', 'Nuxt', 'User Experience', 'Dynamic Web Interactions'],
   },
   {
+    id: skillIDs.NEXTJS,
     name: 'Next.js',
     icon: 'devicon:nextjs',
     description:
@@ -63,6 +94,7 @@ export const softwareSkills: Skill[] = [
     ],
   },
   {
+    id: skillIDs.FLUTTER,
     name: 'Flutter',
     icon: 'devicon:flutter',
     description:
@@ -71,6 +103,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Mobile App', 'Elvan AB', 'Spotlas', '100k+ Downloads', 'The Daily Star'],
   },
   {
+    id: skillIDs.DART,
     name: 'Dart',
     icon: 'devicon:dart',
     description:
@@ -79,6 +112,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Mobile App', 'Flutter', 'Performance-Optimized', 'User Experience'],
   },
   {
+    id: skillIDs.REACT,
     name: 'React',
     icon: 'devicon:react',
     description:
@@ -96,6 +130,7 @@ export const softwareSkills: Skill[] = [
     ],
   },
   {
+    id: skillIDs.AZURE,
     name: 'Azure',
     icon: 'devicon:azure',
     description:

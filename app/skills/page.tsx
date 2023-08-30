@@ -41,14 +41,13 @@ function SkillsPage() {
       <div className='grid grid-cols-3 gap-14'>
         {skillList.map((skill, index) => {
           return (
-            <div
+            <button
               key={index}
               onClick={() => handleNavigation(skill.name)}
               className='col-span-1 cursor-pointer'
             >
               <h3>{skill.name}</h3>
-              {/* <p>{skill.description}</p> */}
-            </div>
+            </button>
           );
         })}
       </div>
