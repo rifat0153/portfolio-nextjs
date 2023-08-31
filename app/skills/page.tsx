@@ -44,7 +44,7 @@ function SkillsPage() {
             <button
               key={index}
               onClick={() => handleNavigation(skill.name)}
-              className='col-span-1 cursor-pointer'
+              className='col-span-1 transform cursor-pointer duration-0 transition-all hover:-translate-y-1'
             >
               <h3>{skill.name}</h3>
             </button>

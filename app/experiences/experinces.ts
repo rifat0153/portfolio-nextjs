@@ -18,8 +18,9 @@ export interface WorkExperience {
   company: string;
   duration: string; // Could be a date range or years
   description: string;
-  associatedSkills: (keyof typeof skillIDs)[];
-  associatedProjects: (keyof typeof projectIDs)[];
+  image?: string;
+  associatedSkills: (typeof skillIDs)[keyof typeof skillIDs][];
+  associatedProjects: (typeof projectIDs)[keyof typeof projectIDs][];
 }
 
 export const workExperiences: WorkExperience[] = [
@@ -30,8 +31,10 @@ export const workExperiences: WorkExperience[] = [
     duration: 'June 2022 – Current',
     description:
       "Built a brand new anomaly detection system for Network Rail to remotely monitor rail stations and early problem detection. Developed internal dashboards for statistical data analysis, making it a single source to analyze product performance and take necessary actions. Performed regression and system-level testing to verify software quality and function prior to release. Collaborated with team members to create applications' system analysis based on client requirements.",
-    associatedSkills: ['VUEJS', 'NEXTJS'],
-    associatedProjects: [projectIDs.ANOMALY_DETECTION as keyof typeof projectIDs],
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/senceive-1.png?alt=media&token=aec7c648-318c-4757-8275-6266b7cfeff7',
+    associatedSkills: ['vuejs', 'dotnet', 'csharp', 'azure', 'typescript', 'javascript'],
+    associatedProjects: [projectIDs.ANOMALY_DETECTION],
   },
   {
     id: experienceIDs.ElvanAB,
@@ -40,7 +43,8 @@ export const workExperiences: WorkExperience[] = [
     duration: 'January 2023 – May 2023',
     description:
       'Engineered and led a client restaurant application with admin panel (web) using Flutter and Dart. Managed a team of two Flutter developers, giving leadership experience. Transitioned the project to a mono repo structure, leading to easier project management.',
-    associatedSkills: [], // Fill this out based on the specific skills you used for this job
+
+    associatedSkills: ['flutter', 'dart', 'firebase'],
     associatedProjects: [], // Same here
   },
   {
@@ -80,7 +84,7 @@ export const workExperiences: WorkExperience[] = [
     duration: '2020 – December 2020',
     description:
       'Learned React and Nodejs while working as an intern. Developed Web UI according to design.',
-    associatedSkills: [], // Fill this out based on the specific skills you used for this job
+    associatedSkills: ['react'], // Fill this out based on the specific skills you used for this job
     associatedProjects: [], // Same here
   },
 ];

@@ -13,7 +13,7 @@ export interface Project {
   name: string;
   description: string;
   url: string;
-  associatedSkills: (keyof typeof skillIDs)[];
+  associatedSkills: (typeof skillIDs)[keyof typeof skillIDs][];
 }
 
 export const softwareProjects: Project[] = [
@@ -22,7 +22,7 @@ export const softwareProjects: Project[] = [
     name: 'Anomaly Detection System',
     description: 'A system I developed for Network Rail to detect anomalies ...', // Mocked
     url: 'https://networkrail.co.uk/anomaly-detection/', // Mocked
-    associatedSkills: ['CSHARP', 'DOTNET'],
+    associatedSkills: ['csharp'],
   },
   // ... other projects
 ];

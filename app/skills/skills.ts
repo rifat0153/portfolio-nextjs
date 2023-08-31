@@ -2,16 +2,20 @@ import { ExperienceIDType, experienceIDs } from '../experiences/experinces';
 import { ProjectIDType, projectIDs } from '../projects/projects';
 
 export const skillIDs = {
-  CSHARP: 'csharp',
-  DOTNET: 'dotnet',
-  TYPESCRIPT: 'typescript',
-  JAVASCRIPT: 'javascript',
-  VUEJS: 'vuejs',
-  NEXTJS: 'nextjs',
-  FLUTTER: 'flutter',
-  DART: 'dart',
-  REACT: 'react',
-  AZURE: 'azure',
+  Csharp: 'csharp',
+  Dotnet: 'dotnet',
+  SqlServer: 'sql-server',
+  MongoDB: 'mongodb',
+  Typescript: 'typescript',
+  Javascript: 'javascript',
+  VueJs: 'vuejs',
+  NuxtJs: 'nuxtjs',
+  React: 'react',
+  NextJs: 'nextjs',
+  Flutter: 'flutter',
+  Dart: 'dart',
+  Firebase: 'firebase',
+  Azure: 'azure',
 } as const;
 
 export type SkillIDType = (typeof skillIDs)[keyof typeof skillIDs];
@@ -29,7 +33,7 @@ export interface Skill {
 
 export const softwareSkills: Skill[] = [
   {
-    id: skillIDs.CSHARP,
+    id: skillIDs.Csharp,
     name: 'C-Sharp',
     icon: 'devicon:csharp',
     description:
@@ -40,7 +44,7 @@ export const softwareSkills: Skill[] = [
     associatedProjects: [projectIDs.ANOMALY_DETECTION],
   },
   {
-    id: skillIDs.DOTNET,
+    id: skillIDs.Dotnet,
     name: '.Net',
     icon: 'devicon:dot-net',
     description:
@@ -50,7 +54,7 @@ export const softwareSkills: Skill[] = [
     associatedExperiences: [experienceIDs.Senceive],
   },
   {
-    id: skillIDs.TYPESCRIPT,
+    id: skillIDs.Typescript,
     name: 'Typescript',
     icon: 'devicon:typescript',
     description:
@@ -60,7 +64,7 @@ export const softwareSkills: Skill[] = [
     associatedExperiences: [experienceIDs.Senceive, experienceIDs.ElvanAB, experienceIDs.RsiLab],
   },
   {
-    id: skillIDs.JAVASCRIPT,
+    id: skillIDs.Javascript,
     name: 'JavaScript',
     icon: 'devicon:javascript',
     description:
@@ -69,7 +73,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Dynamic', 'Interactive', 'React', 'Vue.js', 'Next.js', 'Efficiency'],
   },
   {
-    id: skillIDs.VUEJS,
+    id: skillIDs.VueJs,
     name: 'Vue.js',
     icon: 'devicon:vuejs',
     description:
@@ -78,7 +82,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Frontend', 'Vue 3', 'Nuxt', 'User Experience', 'Dynamic Web Interactions'],
   },
   {
-    id: skillIDs.NEXTJS,
+    id: skillIDs.NextJs,
     name: 'Next.js',
     icon: 'devicon:nextjs',
     description:
@@ -94,7 +98,7 @@ export const softwareSkills: Skill[] = [
     ],
   },
   {
-    id: skillIDs.FLUTTER,
+    id: skillIDs.Flutter,
     name: 'Flutter',
     icon: 'devicon:flutter',
     description:
@@ -103,7 +107,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Mobile App', 'Elvan AB', 'Spotlas', '100k+ Downloads', 'The Daily Star'],
   },
   {
-    id: skillIDs.DART,
+    id: skillIDs.Dart,
     name: 'Dart',
     icon: 'devicon:dart',
     description:
@@ -112,7 +116,7 @@ export const softwareSkills: Skill[] = [
     tags: ['Mobile App', 'Flutter', 'Performance-Optimized', 'User Experience'],
   },
   {
-    id: skillIDs.REACT,
+    id: skillIDs.React,
     name: 'React',
     icon: 'devicon:react',
     description:
@@ -130,13 +134,57 @@ export const softwareSkills: Skill[] = [
     ],
   },
   {
-    id: skillIDs.AZURE,
+    id: skillIDs.Azure,
     name: 'Azure',
     icon: 'devicon:azure',
     description:
       'My foray into cloud computing with Azure has been a game-changer. From deploying applications to managing their life cycles, Azure’s suite has allowed me to ensure high availability, scalability, and resilience in all my projects.',
     url: 'https://azure.microsoft.com/en-us/',
     tags: ['Cloud Computing', 'Deployment', 'High Availability', 'Scalability', 'Resilience'],
+  },
+  {
+    id: skillIDs.SqlServer,
+    name: 'SQL Server',
+    icon: 'devicon-plain:microsoftsqlserver-wordmark',
+    description:
+      'SQL Server has been a cornerstone in my arsenal for relational database management. From designing relational schemas to optimizing queries, I’ve leveraged SQL Server to guarantee data integrity, security, and high performance in my applications.',
+    url: 'https://www.microsoft.com/en-us/sql-server/',
+    tags: ['Database', 'RDBMS', 'High-Performance', 'Data Integrity'],
+    associatedExperiences: [],
+    associatedProjects: [],
+  },
+  {
+    id: skillIDs.MongoDB,
+    name: 'MongoDB',
+    icon: 'devicon:mongodb',
+    description:
+      'When it comes to NoSQL databases, MongoDB stands out. I’ve used it extensively to develop applications requiring flexibility, scalability, and high-performance data operations. Its document-oriented structure allowed me to build applications more agilely, adapting to changing requirements on the fly. Additionally, I’ve utilized MongoDB’s Geo Queries for spatially aware functionalities, enabling location-based services and features in my applications.',
+    url: 'https://www.mongodb.com/',
+    tags: ['Database', 'NoSQL', 'Flexible', 'Document-Oriented'],
+    associatedExperiences: [],
+    associatedProjects: [],
+  },
+  {
+    id: skillIDs.NuxtJs,
+    name: 'Nuxt.js',
+    icon: 'devicon:nuxtjs',
+    description:
+      'Building upon my Vue.js expertise, Nuxt.js has been my go-to framework for creating Universal Vue.js Applications. I’ve harnessed its capabilities for server-side rendering, SEO improvements, and to simplify the configuration complexities often associated with modern web development.',
+    url: 'https://nuxtjs.org/',
+    tags: ['Frontend', 'Vue.js', 'Server-side Rendering', 'SEO'],
+    associatedExperiences: [],
+    associatedProjects: [],
+  },
+  {
+    id: skillIDs.Firebase,
+    name: 'Firebase',
+    icon: 'logos:firebase',
+    description:
+      'Firebase’s suite of tools has been invaluable for rapidly developing web and mobile applications. From its real-time database to authentication and cloud functions, Firebase has allowed me to create fully-fledged applications with reduced backend complexity.',
+    url: 'https://firebase.google.com/',
+    tags: ['Backend', 'Real-time Database', 'Authentication', 'Serverless'],
+    associatedExperiences: [],
+    associatedProjects: [],
   },
   // Add more software skills here
 ];
