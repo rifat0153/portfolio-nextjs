@@ -13,7 +13,7 @@ export default function SkillDetail({
 }) {
   const skills = softwareSkills;
 
-  const skill = skills.find((skill) => skill.name === params.slug);
+  const skill = skills.find((skill) => skill.id === params.slug);
 
   if (!skill) {
     return <div>Not found</div>;

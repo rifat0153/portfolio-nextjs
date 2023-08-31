@@ -6,7 +6,7 @@ const Header = () => {
     'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20CV.pdf?alt=media&token=64bbfa05-8620-4e18-982e-64976d7005fa';
 
   return (
-    <div className='flex w-full items-center justify-between py-2'>
+    <div className='flex w-full items-center justify-between bg-gradient-to-b from-white to-white/90 py-4'>
       <div>
         <Link href='/' className='flex items-center font-bold'>
           <Icon icon='icon-park:left' />

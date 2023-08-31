@@ -12,6 +12,7 @@
   "dependencies": {
     "@iconify/react": "^4.1.1",
     "@nextui-org/react": "^2.1.5",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@vercel/analytics": "^0.1.10",
     "firebase": "^10.1.0",
     "framer-motion": "^10.13.0",

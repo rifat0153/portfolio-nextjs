@@ -23,8 +23,8 @@ function SkillsPage() {
     }
   };
 
-  const handleNavigation = (skillName: string) => {
-    router.push(`/skills/${skillName}`);
+  const handleNavigation = (skillId: string) => {
+    router.push(`/skills/${skillId}`);
   };
 
   return (
@@ -43,7 +43,7 @@ function SkillsPage() {
           return (
             <button
               key={index}
-              onClick={() => handleNavigation(skill.name)}
+              onClick={() => handleNavigation(skill.id)}
               className='col-span-1 transform cursor-pointer duration-0 transition-all hover:-translate-y-1'
             >
               <h3>{skill.name}</h3>

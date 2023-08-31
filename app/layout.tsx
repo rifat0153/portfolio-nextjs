@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NextUIProvider>
           <div className='w-full'>
             <div className='mx-auto max-w-6xl'>
-              <nav>
+              <nav className='sticky top-0 z-20'>
                 <Header />
               </nav>
               <main className='w-full duration-500 transition-colors dark:bg-gray-900'>
