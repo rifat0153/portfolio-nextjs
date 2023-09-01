@@ -16,7 +16,7 @@ export interface WorkExperience {
   id: ExperienceIDType;
   jobTitle: string;
   company: string;
-  duration: string; // Could be a date range or years
+  duration: string;
   description: string;
   country?: string;
   image?: string;
@@ -36,7 +36,7 @@ export const workExperiences: WorkExperience[] = [
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/senceive-1.png?alt=media&token=aec7c648-318c-4757-8275-6266b7cfeff7',
     associatedSkills: ['vuejs', 'dotnet', 'csharp', 'azure', 'typescript', 'javascript'],
-    associatedProjects: [projectIDs.ANOMALY_DETECTION],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: experienceIDs.ElvanAB,
@@ -48,7 +48,7 @@ export const workExperiences: WorkExperience[] = [
       'Engineered and led a client restaurant application with admin panel (web) using Flutter and Dart. Managed a team of two Flutter developers, giving leadership experience. Transitioned the project to a mono repo structure, leading to easier project management.',
 
     associatedSkills: ['flutter', 'dart', 'firebase'],
-    associatedProjects: [], // Same here
+    associatedProjects: ['elvan-restaurant-app'],
   },
   {
     id: experienceIDs.RsiLab,
@@ -60,8 +60,8 @@ export const workExperiences: WorkExperience[] = [
       'Built "The Daily Star - Bangladesh" mobile app for both iOS and Android platforms with 10,000+ daily active users and 100k+ downloads. Improved app scrolling performance by 30%, implementing nested scroll views and proper data caching. Reduced the number of crashes on Android devices.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/RSI-Lab-1.png?alt=media&token=395b538e-83fc-4760-88e1-afd2a8bf9e8e',
-    associatedSkills: [], // Fill this out based on the specific skills you used for this job
-    associatedProjects: [], // Same here
+    associatedSkills: ['flutter', 'dart', 'nodejs'], // Fill this out based on the specific skills you used for this job
+    associatedProjects: ['daily-star-app'],
   },
   {
     id: experienceIDs.Spotlas,
@@ -73,8 +73,8 @@ export const workExperiences: WorkExperience[] = [
       'Participated in the development and maintenance of the Chat feature. Collaborated with other developers to identify and alleviate software bugs.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/spotlas-img-1.png?alt=media&token=06585427-a04e-463a-93b8-3cccd78dc0e1',
-    associatedSkills: [], // Fill this out based on the specific skills you used for this job
-    associatedProjects: [], // Same here
+    associatedSkills: ['flutter', 'dart'],
+    associatedProjects: ['spotlas'],
   },
   {
     id: experienceIDs.PlanBInsights,
@@ -86,8 +86,16 @@ export const workExperiences: WorkExperience[] = [
       'Developed a charity app with Flutter, NodeJs (Express) and MongoDB from scratch. Implemented geospatial support via MongoDB geo queries and real-time notification using Firestore. Managed NodeJs backend deployment to Google Cloud Run with Docker.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/plan%20b%20insights%201.png?alt=media&token=e7faf080-208c-44c7-8303-0578a742b816',
-    associatedSkills: [], // Fill this out based on the specific skills you used for this job
-    associatedProjects: [], // Same here
+    associatedSkills: [
+      'flutter',
+      'dart',
+      'nodejs',
+      'mongodb',
+      'firebase',
+      'google-cloud-run',
+      'docker',
+    ],
+    associatedProjects: ['aalokito'],
   },
   {
     id: experienceIDs.BengalSoftware,
@@ -99,7 +107,7 @@ export const workExperiences: WorkExperience[] = [
       'Learned React and Nodejs while working as an intern. Developed Web UI according to design.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/bengal-soft.png?alt=media&token=b0b0b1df-2db5-4c21-9f8a-c200a05764fb',
-    associatedSkills: ['react'], // Fill this out based on the specific skills you used for this job
-    associatedProjects: [], // Same here
+    associatedSkills: ['react', 'nodejs', 'mongodb'],
+    associatedProjects: [],
   },
 ];

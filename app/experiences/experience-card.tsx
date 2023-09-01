@@ -81,12 +81,6 @@ export default function ExperinceCard({ experience }: { experience: WorkExperien
                 placement='bottom'
                 className='border-none'
               >
-                {/* <button
-                  className='rounded-lg bg-gray-200 px-2 py-1 text-sm font-semibold text-gray-800'
-                  onClick={(e) => navigateToSkill(skill.id, e)}
-                >
-                  {skill.name}
-                </button> */}
                 <button onClick={(e) => navigateToSkill(skill.id, e)}>
                   <Icon icon={skill.icon} fontSize={20} />
                 </button>

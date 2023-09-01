@@ -16,6 +16,13 @@ export const skillIDs = {
   Dart: 'dart',
   Firebase: 'firebase',
   Azure: 'azure',
+  NodeJs: 'nodejs',
+  TailwindCSS: 'tailwindcss',
+  GoogleCloudRun: 'google-cloud-run',
+  Docker: 'docker',
+  RestApi: 'rest-api',
+  UnitTesting: 'unit-testing',
+  EntityFramework: 'entity-framework',
 } as const;
 
 export type SkillIDType = (typeof skillIDs)[keyof typeof skillIDs];
@@ -33,6 +40,90 @@ export interface Skill {
 
 export const softwareSkills: Skill[] = [
   {
+    id: skillIDs.RestApi,
+    name: 'REST API',
+    icon: 'logos:rest',
+    description:
+      'I have extensive experience designing and developing RESTful web services. Through my expertise with REST APIs, I’ve built scalable and performant systems that offer seamless communication between the frontend and backend components, ensuring a smooth user experience.',
+    url: 'https://www.restapitutorial.com/',
+    tags: ['Backend', 'Web Services', 'Scalable', 'Performant'],
+    associatedExperiences: ['senceive', 'rsi-lab', 'spotlas', 'rsi-lab', 'plan-b-insights'],
+    associatedProjects: [
+      'signal-box',
+      'production-dashboard',
+      'elvan-restaurant-app',
+      'daily-star-app',
+      'spotlas',
+      'aalokito',
+    ],
+  },
+  {
+    id: skillIDs.UnitTesting,
+    name: 'Unit Testing',
+    icon: 'logos:jest',
+    description:
+      'A firm believer in the test-driven development approach, I always ensure my code is robust and free from bugs. Through unit testing, I’ve guaranteed the reliability of my software solutions, ensuring they meet the intended requirements and behave predictably under various conditions.',
+    url: 'https://jestjs.io/',
+    tags: ['Testing', 'Reliability', 'Test-Driven Development'],
+    associatedExperiences: ['senceive', 'rsi-lab'],
+    associatedProjects: ['signal-box', 'production-dashboard', 'daily-star-app'],
+  },
+  {
+    id: skillIDs.EntityFramework,
+    name: 'Entity Framework',
+    icon: 'logos:entity-framework',
+    description:
+      'Having employed Entity Framework extensively in my projects, I’ve streamlined database operations, leveraging its ORM capabilities. It allows me to work with relational data as domain-specific objects, eliminating the need for most of the data access code.',
+    url: 'https://docs.microsoft.com/en-us/ef/',
+    tags: ['Database', 'ORM', 'Data Access'],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
+  },
+  {
+    id: skillIDs.NodeJs,
+    name: 'Node.js',
+    icon: 'devicon:nodejs',
+    description:
+      'Node.js has been a pivotal part of my backend development journey, enabling me to build scalable and performant APIs. Its non-blocking architecture ensures optimal performance even with numerous simultaneous requests.',
+    url: 'https://nodejs.org/',
+    tags: ['Backend', 'API', 'Non-blocking', 'Performance'],
+    associatedExperiences: ['rsi-lab', 'plan-b-insights', 'bengal-software'],
+    associatedProjects: ['daily-star-app', 'spotlas', 'aalokito'],
+  },
+  {
+    id: skillIDs.TailwindCSS,
+    name: 'Tailwind CSS',
+    icon: 'logos:tailwindcss-icon',
+    description:
+      'Tailwind CSS offers a utility-first approach to styling, and I’ve leveraged it to craft beautiful and responsive UIs efficiently. Its modular structure allows me to write concise and maintainable CSS.',
+    url: 'https://tailwindcss.com/',
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard', 'personal-portfolio'],
+    tags: ['Frontend', 'Styling', 'Utility-first', 'Responsive'],
+  },
+  {
+    id: skillIDs.GoogleCloudRun,
+    name: 'Google Cloud Run',
+    icon: 'logos:google-cloud',
+    description:
+      'Google Cloud Run has empowered me to deploy containerized applications seamlessly in a fully managed environment. Its scalability and integration with other GCP services make application deployment and management a breeze.',
+    url: 'https://cloud.google.com/run',
+    associatedExperiences: ['plan-b-insights'],
+    associatedProjects: ['aalokito'],
+    tags: ['Cloud', 'Containerization', 'Deployment', 'Scalability'],
+  },
+  {
+    id: skillIDs.Docker,
+    name: 'Docker',
+    icon: 'devicon:docker',
+    description:
+      'Docker has revolutionized my workflow by allowing me to containerize applications, ensuring consistency across different environments. Building, shipping, and running applications have never been so straightforward.',
+    url: 'https://www.docker.com/',
+    associatedExperiences: ['plan-b-insights'],
+    associatedProjects: ['aalokito'],
+    tags: ['Containerization', 'Deployment', 'Consistency'],
+  },
+  {
     id: skillIDs.Csharp,
     name: 'C-Sharp',
     icon: 'devicon:csharp',
@@ -40,8 +131,8 @@ export const softwareSkills: Skill[] = [
       'Throughout my career, I’ve heavily leaned on C# for backend development. This expertise has been instrumental in creating robust systems, especially in tandem with .Net Core. My work on the anomaly detection system for Network Rail stands as a testament to my capabilities with C#.',
     url: 'https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
     tags: ['Backend', 'Network Rail', 'Anomaly Detection', '.Net Core'],
-    associatedExperiences: [experienceIDs.Senceive],
-    associatedProjects: [projectIDs.ANOMALY_DETECTION],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: skillIDs.Dotnet,
@@ -51,7 +142,8 @@ export const softwareSkills: Skill[] = [
       '.NET Core reflects my prowess in backend development. I’ve used it to craft robust solutions, such as the system for Network Rail, ensuring they’re both high-performing and scalable.',
     url: 'https://dotnet.microsoft.com/en-us/',
     tags: ['Backend', 'Network Rail', 'High-Performance', 'Scalable'],
-    associatedExperiences: [experienceIDs.Senceive],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: skillIDs.Typescript,
@@ -61,7 +153,8 @@ export const softwareSkills: Skill[] = [
       'Integrating TypeScript with tools like React and Vue.js, I’ve ensured my applications are type-safe and efficient. It’s not just about writing code; it’s about writing scalable and maintainable code, and TypeScript helps me achieve that.',
     url: 'https://www.typescriptlang.org/',
     tags: ['Type-safe', 'Efficient', 'React', 'Vue.js', 'Scalable', 'Maintainable'],
-    associatedExperiences: [experienceIDs.Senceive, experienceIDs.ElvanAB, experienceIDs.RsiLab],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard', 'personal-portfolio'],
   },
   {
     id: skillIDs.Javascript,
@@ -71,6 +164,8 @@ export const softwareSkills: Skill[] = [
       'JavaScript remains central to my development toolkit, enabling me to create dynamic and interactive applications. My expertise, combined with frameworks like React, Vue.js, and Next.js, has powered numerous projects, enhancing user interactions and overall efficiency.',
     url: 'https://developer.mozilla.org/en-US/',
     tags: ['Dynamic', 'Interactive', 'React', 'Vue.js', 'Next.js', 'Efficiency'],
+    associatedExperiences: ['senceive', 'rsi-lab', 'plan-b-insights'],
+    associatedProjects: ['daily-star-app', 'aalokito', 'personal-portfolio'],
   },
   {
     id: skillIDs.VueJs,
@@ -80,6 +175,8 @@ export const softwareSkills: Skill[] = [
       'I’ve always found Vue.js to be a powerful tool for frontend development. Leveraging Vue 3 and complementary tools like Nuxt, I’ve developed intuitive dashboards and applications that emphasize user experience and dynamic web interactions.',
     url: 'https://vuejs.org/',
     tags: ['Frontend', 'Vue 3', 'Nuxt', 'User Experience', 'Dynamic Web Interactions'],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: skillIDs.NextJs,
@@ -96,6 +193,8 @@ export const softwareSkills: Skill[] = [
       'Scalability',
       'SEO',
     ],
+    associatedExperiences: [],
+    associatedProjects: ['personal-portfolio'],
   },
   {
     id: skillIDs.Flutter,
@@ -105,6 +204,8 @@ export const softwareSkills: Skill[] = [
       'My experience with Flutter has been both extensive and rewarding. I’ve led projects and crafted applications such as the restaurant app for Elvan AB and contributed significantly to apps like Spotlas. Through Flutter and Dart, I’ve been able to bring to life mobile applications that genuinely resonate with users, as highlighted by the 100k+ downloads of The Daily Star app.',
     url: 'https://flutter.dev/',
     tags: ['Mobile App', 'Elvan AB', 'Spotlas', '100k+ Downloads', 'The Daily Star'],
+    associatedExperiences: ['elvan-ab', 'rsi-lab', 'plan-b-insights'],
+    associatedProjects: ['elvan-restaurant-app', 'daily-star-app', 'spotlas', 'aalokito'],
   },
   {
     id: skillIDs.Dart,
@@ -114,6 +215,8 @@ export const softwareSkills: Skill[] = [
       'Paired with Flutter, Dart has been my go-to for crafting the functionality of mobile applications. It’s been essential in delivering apps that are not only performance-optimized but also focused on user experience.',
     url: 'https://dart.dev/',
     tags: ['Mobile App', 'Flutter', 'Performance-Optimized', 'User Experience'],
+    associatedExperiences: ['elvan-ab', 'rsi-lab', 'plan-b-insights'],
+    associatedProjects: ['elvan-restaurant-app', 'daily-star-app', 'spotlas', 'aalokito'],
   },
   {
     id: skillIDs.React,
@@ -132,6 +235,8 @@ export const softwareSkills: Skill[] = [
       'Performance',
       'Scalability',
     ],
+    associatedExperiences: ['bengal-software'],
+    associatedProjects: ['personal-portfolio'],
   },
   {
     id: skillIDs.Azure,
@@ -141,6 +246,8 @@ export const softwareSkills: Skill[] = [
       'My foray into cloud computing with Azure has been a game-changer. From deploying applications to managing their life cycles, Azure’s suite has allowed me to ensure high availability, scalability, and resilience in all my projects.',
     url: 'https://azure.microsoft.com/en-us/',
     tags: ['Cloud Computing', 'Deployment', 'High Availability', 'Scalability', 'Resilience'],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: skillIDs.SqlServer,
@@ -150,8 +257,8 @@ export const softwareSkills: Skill[] = [
       'SQL Server has been a cornerstone in my arsenal for relational database management. From designing relational schemas to optimizing queries, I’ve leveraged SQL Server to guarantee data integrity, security, and high performance in my applications.',
     url: 'https://www.microsoft.com/en-us/sql-server/',
     tags: ['Database', 'RDBMS', 'High-Performance', 'Data Integrity'],
-    associatedExperiences: [],
-    associatedProjects: [],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
     id: skillIDs.MongoDB,
@@ -161,8 +268,8 @@ export const softwareSkills: Skill[] = [
       'When it comes to NoSQL databases, MongoDB stands out. I’ve used it extensively to develop applications requiring flexibility, scalability, and high-performance data operations. Its document-oriented structure allowed me to build applications more agilely, adapting to changing requirements on the fly. Additionally, I’ve utilized MongoDB’s Geo Queries for spatially aware functionalities, enabling location-based services and features in my applications.',
     url: 'https://www.mongodb.com/',
     tags: ['Database', 'NoSQL', 'Flexible', 'Document-Oriented'],
-    associatedExperiences: [],
-    associatedProjects: [],
+    associatedExperiences: ['plan-b-insights'],
+    associatedProjects: ['aalokito'],
   },
   {
     id: skillIDs.NuxtJs,
@@ -172,8 +279,8 @@ export const softwareSkills: Skill[] = [
       'Building upon my Vue.js expertise, Nuxt.js has been my go-to framework for creating Universal Vue.js Applications. I’ve harnessed its capabilities for server-side rendering, SEO improvements, and to simplify the configuration complexities often associated with modern web development.',
     url: 'https://nuxtjs.org/',
     tags: ['Frontend', 'Vue.js', 'Server-side Rendering', 'SEO'],
-    associatedExperiences: [],
-    associatedProjects: [],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['production-dashboard'],
   },
   {
     id: skillIDs.Firebase,
@@ -183,8 +290,7 @@ export const softwareSkills: Skill[] = [
       'Firebase’s suite of tools has been invaluable for rapidly developing web and mobile applications. From its real-time database to authentication and cloud functions, Firebase has allowed me to create fully-fledged applications with reduced backend complexity.',
     url: 'https://firebase.google.com/',
     tags: ['Backend', 'Real-time Database', 'Authentication', 'Serverless'],
-    associatedExperiences: [],
-    associatedProjects: [],
+    associatedExperiences: ['elvan-ab', 'plan-b-insights'],
+    associatedProjects: ['elvan-restaurant-app', 'aalokito'],
   },
-  // Add more software skills here
 ];

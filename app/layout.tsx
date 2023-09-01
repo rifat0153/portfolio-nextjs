@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <nav className='sticky top-0 z-20'>
                 <Header />
               </nav>
-              <main className='w-full duration-500 transition-colors dark:bg-gray-900'>
+              <main className='w-full p-4 duration-500 transition-colors dark:bg-gray-900'>
                 <div className='mx-auto w-full max-w-5xl'>{children}</div>
               </main>
             </div>

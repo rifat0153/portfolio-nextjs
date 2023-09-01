@@ -28,7 +28,7 @@ function SkillsPage() {
   };
 
   return (
-    <div className='pt-8 lg:pt-[20vh]'>
+    <div className='lg:pt-[10vh]'>
       <div className='py-8'>
         <Input
           type='text'
@@ -38,7 +38,7 @@ function SkillsPage() {
         />
       </div>
 
-      <div className='grid grid-cols-3 gap-14'>
+      <div className='grid grid-cols-2 gap-14 lg:grid-cols-3'>
         {skillList.map((skill, index) => {
           return (
             <button
