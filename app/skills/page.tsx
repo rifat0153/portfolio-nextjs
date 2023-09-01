@@ -28,8 +28,8 @@ function SkillsPage() {
   };
 
   return (
-    <div className='lg:pt-[10vh]'>
-      <div className='py-8'>
+    <div className='lg:pt-[2vh]'>
+      <div className='py-4 lg:py-8'>
         <Input
           type='text'
           placeholder='Search by skill'

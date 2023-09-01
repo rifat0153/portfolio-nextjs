@@ -1,5 +1,5 @@
-import { ExperienceIDType, experienceIDs } from '../experiences/experinces';
-import { ProjectIDType, projectIDs } from '../projects/projects';
+import { ExperienceIDType } from '../experiences/experinces';
+import { ProjectIDType } from '../projects/projects';
 
 export const skillIDs = {
   Csharp: 'csharp',
@@ -39,90 +39,6 @@ export interface Skill {
 }
 
 export const softwareSkills: Skill[] = [
-  {
-    id: skillIDs.RestApi,
-    name: 'REST API',
-    icon: 'logos:rest',
-    description:
-      'I have extensive experience designing and developing RESTful web services. Through my expertise with REST APIs, I’ve built scalable and performant systems that offer seamless communication between the frontend and backend components, ensuring a smooth user experience.',
-    url: 'https://www.restapitutorial.com/',
-    tags: ['Backend', 'Web Services', 'Scalable', 'Performant'],
-    associatedExperiences: ['senceive', 'rsi-lab', 'spotlas', 'rsi-lab', 'plan-b-insights'],
-    associatedProjects: [
-      'signal-box',
-      'production-dashboard',
-      'elvan-restaurant-app',
-      'daily-star-app',
-      'spotlas',
-      'aalokito',
-    ],
-  },
-  {
-    id: skillIDs.UnitTesting,
-    name: 'Unit Testing',
-    icon: 'logos:jest',
-    description:
-      'A firm believer in the test-driven development approach, I always ensure my code is robust and free from bugs. Through unit testing, I’ve guaranteed the reliability of my software solutions, ensuring they meet the intended requirements and behave predictably under various conditions.',
-    url: 'https://jestjs.io/',
-    tags: ['Testing', 'Reliability', 'Test-Driven Development'],
-    associatedExperiences: ['senceive', 'rsi-lab'],
-    associatedProjects: ['signal-box', 'production-dashboard', 'daily-star-app'],
-  },
-  {
-    id: skillIDs.EntityFramework,
-    name: 'Entity Framework',
-    icon: 'logos:entity-framework',
-    description:
-      'Having employed Entity Framework extensively in my projects, I’ve streamlined database operations, leveraging its ORM capabilities. It allows me to work with relational data as domain-specific objects, eliminating the need for most of the data access code.',
-    url: 'https://docs.microsoft.com/en-us/ef/',
-    tags: ['Database', 'ORM', 'Data Access'],
-    associatedExperiences: ['senceive'],
-    associatedProjects: ['signal-box', 'production-dashboard'],
-  },
-  {
-    id: skillIDs.NodeJs,
-    name: 'Node.js',
-    icon: 'devicon:nodejs',
-    description:
-      'Node.js has been a pivotal part of my backend development journey, enabling me to build scalable and performant APIs. Its non-blocking architecture ensures optimal performance even with numerous simultaneous requests.',
-    url: 'https://nodejs.org/',
-    tags: ['Backend', 'API', 'Non-blocking', 'Performance'],
-    associatedExperiences: ['rsi-lab', 'plan-b-insights', 'bengal-software'],
-    associatedProjects: ['daily-star-app', 'spotlas', 'aalokito'],
-  },
-  {
-    id: skillIDs.TailwindCSS,
-    name: 'Tailwind CSS',
-    icon: 'logos:tailwindcss-icon',
-    description:
-      'Tailwind CSS offers a utility-first approach to styling, and I’ve leveraged it to craft beautiful and responsive UIs efficiently. Its modular structure allows me to write concise and maintainable CSS.',
-    url: 'https://tailwindcss.com/',
-    associatedExperiences: ['senceive'],
-    associatedProjects: ['signal-box', 'production-dashboard', 'personal-portfolio'],
-    tags: ['Frontend', 'Styling', 'Utility-first', 'Responsive'],
-  },
-  {
-    id: skillIDs.GoogleCloudRun,
-    name: 'Google Cloud Run',
-    icon: 'logos:google-cloud',
-    description:
-      'Google Cloud Run has empowered me to deploy containerized applications seamlessly in a fully managed environment. Its scalability and integration with other GCP services make application deployment and management a breeze.',
-    url: 'https://cloud.google.com/run',
-    associatedExperiences: ['plan-b-insights'],
-    associatedProjects: ['aalokito'],
-    tags: ['Cloud', 'Containerization', 'Deployment', 'Scalability'],
-  },
-  {
-    id: skillIDs.Docker,
-    name: 'Docker',
-    icon: 'devicon:docker',
-    description:
-      'Docker has revolutionized my workflow by allowing me to containerize applications, ensuring consistency across different environments. Building, shipping, and running applications have never been so straightforward.',
-    url: 'https://www.docker.com/',
-    associatedExperiences: ['plan-b-insights'],
-    associatedProjects: ['aalokito'],
-    tags: ['Containerization', 'Deployment', 'Consistency'],
-  },
   {
     id: skillIDs.Csharp,
     name: 'C-Sharp',
@@ -292,5 +208,89 @@ export const softwareSkills: Skill[] = [
     tags: ['Backend', 'Real-time Database', 'Authentication', 'Serverless'],
     associatedExperiences: ['elvan-ab', 'plan-b-insights'],
     associatedProjects: ['elvan-restaurant-app', 'aalokito'],
+  },
+  {
+    id: skillIDs.RestApi,
+    name: 'REST API',
+    icon: 'logos:rest',
+    description:
+      'I have extensive experience designing and developing RESTful web services. Through my expertise with REST APIs, I’ve built scalable and performant systems that offer seamless communication between the frontend and backend components, ensuring a smooth user experience.',
+    url: 'https://www.restapitutorial.com/',
+    tags: ['Backend', 'Web Services', 'Scalable', 'Performant'],
+    associatedExperiences: ['senceive', 'rsi-lab', 'spotlas', 'rsi-lab', 'plan-b-insights'],
+    associatedProjects: [
+      'signal-box',
+      'production-dashboard',
+      'elvan-restaurant-app',
+      'daily-star-app',
+      'spotlas',
+      'aalokito',
+    ],
+  },
+  {
+    id: skillIDs.UnitTesting,
+    name: 'Unit Testing',
+    icon: 'logos:jest',
+    description:
+      'A firm believer in the test-driven development approach, I always ensure my code is robust and free from bugs. Through unit testing, I’ve guaranteed the reliability of my software solutions, ensuring they meet the intended requirements and behave predictably under various conditions.',
+    url: 'https://jestjs.io/',
+    tags: ['Testing', 'Reliability', 'Test-Driven Development'],
+    associatedExperiences: ['senceive', 'rsi-lab'],
+    associatedProjects: ['signal-box', 'production-dashboard', 'daily-star-app'],
+  },
+  {
+    id: skillIDs.EntityFramework,
+    name: 'Entity Framework',
+    icon: 'logos:entity-framework',
+    description:
+      'Having employed Entity Framework extensively in my projects, I’ve streamlined database operations, leveraging its ORM capabilities. It allows me to work with relational data as domain-specific objects, eliminating the need for most of the data access code.',
+    url: 'https://docs.microsoft.com/en-us/ef/',
+    tags: ['Database', 'ORM', 'Data Access'],
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard'],
+  },
+  {
+    id: skillIDs.NodeJs,
+    name: 'Node.js',
+    icon: 'devicon:nodejs',
+    description:
+      'Node.js has been a pivotal part of my backend development journey, enabling me to build scalable and performant APIs. Its non-blocking architecture ensures optimal performance even with numerous simultaneous requests.',
+    url: 'https://nodejs.org/',
+    tags: ['Backend', 'API', 'Non-blocking', 'Performance'],
+    associatedExperiences: ['rsi-lab', 'plan-b-insights', 'bengal-software'],
+    associatedProjects: ['daily-star-app', 'spotlas', 'aalokito'],
+  },
+  {
+    id: skillIDs.TailwindCSS,
+    name: 'Tailwind CSS',
+    icon: 'logos:tailwindcss-icon',
+    description:
+      'Tailwind CSS offers a utility-first approach to styling, and I’ve leveraged it to craft beautiful and responsive UIs efficiently. Its modular structure allows me to write concise and maintainable CSS.',
+    url: 'https://tailwindcss.com/',
+    associatedExperiences: ['senceive'],
+    associatedProjects: ['signal-box', 'production-dashboard', 'personal-portfolio'],
+    tags: ['Frontend', 'Styling', 'Utility-first', 'Responsive'],
+  },
+  {
+    id: skillIDs.GoogleCloudRun,
+    name: 'Google Cloud Run',
+    icon: 'logos:google-cloud',
+    description:
+      'Google Cloud Run has empowered me to deploy containerized applications seamlessly in a fully managed environment. Its scalability and integration with other GCP services make application deployment and management a breeze.',
+    url: 'https://cloud.google.com/run',
+    associatedExperiences: ['plan-b-insights'],
+    associatedProjects: ['aalokito'],
+    tags: ['Cloud', 'Containerization', 'Deployment', 'Scalability'],
+  },
+  {
+    id: skillIDs.Docker,
+    name: 'Docker',
+    icon: 'devicon:docker',
+    description:
+      'Docker has revolutionized my workflow by allowing me to containerize applications, ensuring consistency across different environments. Building, shipping, and running applications have never been so straightforward.',
+    url: 'https://www.docker.com/',
+    associatedExperiences: ['plan-b-insights'],
+    associatedProjects: ['aalokito'],
+    tags: ['Containerization', 'Deployment', 'Consistency'],
   },
 ];

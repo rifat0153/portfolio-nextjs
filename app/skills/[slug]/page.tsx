@@ -2,7 +2,7 @@
 
 import { Chip } from '@nextui-org/react';
 import { softwareSkills } from '../skills';
-import ExperinceChip from './experince-chip';
+import ExperinceChip from './experince_chip';
 
 export default function SkillDetail({
   params,
