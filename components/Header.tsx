@@ -6,34 +6,34 @@ const Header = () => {
     'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/Mahbubur%20Rahman%20CV.pdf?alt=media&token=64bbfa05-8620-4e18-982e-64976d7005fa';
 
   return (
-    <div className='flex w-full items-center justify-between bg-gradient-to-b from-white to-white/90 py-4'>
+    <div className='flex w-full items-center justify-between bg-gradient-to-b from-white to-white/90 px-4 py-4'>
       <div>
         <Link href='/' className='flex items-center font-bold'>
           <Icon icon='icon-park:left' />
           <Icon icon='icon-park:right' />
-          &nbsp; Mahbubur Rahman
+          <span className='hidden lg:block'>&nbsp; Mahbubur Rahman</span>
         </Link>
       </div>
 
       <div className='flex items-center justify-center gap-10'>
         <Link href='/skills' className='flex items-center gap-2'>
           <Icon icon='ic:baseline-bookmark' />
-          <p>Skills</p>
+          <p className='hidden lg:block'>Skills</p>
         </Link>
 
         <Link href='/projects' className='flex items-center gap-2'>
           <Icon icon='fe:tiled' />
-          <p>Projects</p>
+          <p className='hidden lg:block'>Projects</p>
         </Link>
 
         <Link href='/experiences' className='flex items-center gap-2'>
           <Icon icon='ph:briefcase-fill' />
-          <p>Experiences</p>
+          <p className='hidden lg:block'>Experiences</p>
         </Link>
 
         <Link href={resumeLink} className='flex items-center gap-2' target='_blank'>
           <Icon icon='bx:file' />
-          <p>Resume</p>
+          <p className='hidden lg:block'>Resume</p>
         </Link>
       </div>
 

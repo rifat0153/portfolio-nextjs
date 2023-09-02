@@ -6,7 +6,7 @@ function ProjectsPage() {
 
   return (
     <div
-      className='my-8 columns-3 gap-4 lg:my-20 lg:mb-60 lg:grid-cols-3 lg:gap-8'
+      className='my-8 columns-1 gap-4 lg:my-20 lg:mb-60 lg:columns-3 lg:grid-cols-3 lg:gap-8'
       style={{
         gridTemplateRows: 'masonry',
       }}

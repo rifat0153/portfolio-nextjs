@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { Input } from '@nextui-org/react';
 import { softwareSkills } from './skills';
 import { useRouter } from 'next/navigation';
+import { SkillCard } from './skill_card';
 
-function SkillsPage() {
+export default function SkillsPage() {
   const router = useRouter();
 
   const [skillList, setskillList] = useState(softwareSkills);
@@ -24,6 +25,8 @@ function SkillsPage() {
   };
 
   const handleNavigation = (skillId: string) => {
+    console.log(skillId);
+
     router.push(`/skills/${skillId}`);
   };
 
@@ -32,27 +35,21 @@ function SkillsPage() {
       <div className='py-4 lg:py-8'>
         <Input
           type='text'
-          placeholder='Search by skill'
+          placeholder='Search for skill'
           onChange={handleSearch}
           className='py-10'
         />
       </div>
 
-      <div className='grid grid-cols-2 gap-14 lg:grid-cols-3'>
-        {skillList.map((skill, index) => {
+      <div className='grid grid-cols-3 gap-4'>
+        {skillList.map((skill) => {
           return (
-            <button
-              key={index}
-              onClick={() => handleNavigation(skill.id)}
-              className='col-span-1 transform cursor-pointer duration-0 transition-all hover:-translate-y-1'
-            >
-              <h3>{skill.name}</h3>
-            </button>
+            <div key={skill.id} className='col-span-3 lg:col-span-1'>
+              <SkillCard skill={skill} onPress={handleNavigation} />
+            </div>
           );
         })}
       </div>
     </div>
   );
 }
-
-export default SkillsPage;

@@ -1,6 +1,6 @@
 'use client';
 
-import { getWorkExperienceBySkillId } from '@/app/utils/utils';
+import { getWorkExperiencesBySkillId } from '@/app/utils/utils';
 import { Chip } from '@nextui-org/react';
 import { softwareSkills } from '../skills';
 import ExperinceChip from './experince_chip';
@@ -20,7 +20,7 @@ export default function SkillDetail({
     return <div>Not found</div>;
   }
 
-  const experinces = getWorkExperienceBySkillId(skill.id);
+  const experinces = getWorkExperiencesBySkillId(skill.id);
 
   return (
     <div className='inline-flex flex-col justify-center pt-8 text-medium font-normal leading-7 lg:pt-[35vh]'>

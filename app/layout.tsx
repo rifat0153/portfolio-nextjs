@@ -23,17 +23,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body
         className={`
-          w-full duration-1000 transition-colors
+          w-full transition-colors duration-1000
           ${false ? 'dark' : ''}
           ${alegreya.variable} ${inter.variable} font-sans`}
       >
         <NextUIProvider>
           <div className='w-full'>
-            <div className='mx-auto max-w-6xl'>
+            <div className='mx-auto max-w-6xl '>
               <nav className='sticky top-0 z-20'>
                 <Header />
               </nav>
-              <main className='w-full p-4 duration-500 transition-colors dark:bg-gray-900'>
+              <main className='w-full p-4 pb-10 transition-colors duration-500 dark:bg-gray-900 lg:p-0 lg:pb-40'>
                 <div className='mx-auto w-full max-w-5xl'>{children}</div>
               </main>
             </div>

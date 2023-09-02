@@ -28,6 +28,10 @@ module.exports = {
         inter: ['var(--font-inter)'],
         alegreya: ['var(--font-alegreya)'],
       },
+      transitionProperty: {
+        width: 'width',
+        height: 'height',
+      },
     },
   },
   plugins: [containerQueryPlugin, nextui()],

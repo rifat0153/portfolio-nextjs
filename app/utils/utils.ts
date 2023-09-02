@@ -1,4 +1,4 @@
-import { workExperiences } from '../experiences/experinces';
+import { WorkExperience, workExperiences } from '../experiences/experinces';
 import { softwareProjects } from '../projects/projects';
 import { Skill, SkillIDType, softwareSkills } from '../skills/skills';
 
@@ -6,9 +6,9 @@ const getSkillsByIds = (ids: string[]): Skill[] => {
   return softwareSkills.filter((skill) => ids.includes(skill.id));
 };
 
-export const getWorkExperienceBySkillId = (skillId: SkillIDType) => {
+export const getWorkExperiencesBySkillId = (skillId: SkillIDType) => {
   const experiences = workExperiences.filter((experience) =>
-    experience.associatedSkills.includes(skillId)
+    getSkillsByExperienceId(experience.id).some((skill) => skill.id === skillId)
   );
   return experiences;
 };
@@ -28,8 +28,29 @@ export const getSkillsByProjectId = (projectId: string): Skill[] => {
     return [];
   }
 
-  const skills = getSkillsByIds(project.associatedSkills);
-  return skills;
+  // get all work experiences associated with the project
+  const experiences = getWorkExperienceByProjectIds([projectId]);
+
+  // get all skills associated with the project
+  const skills = experiences.flatMap((experience) => {
+    const experienceSkills = getSkillsByIds(experience.associatedSkills);
+    return experienceSkills;
+  });
+
+  // merge with project skills
+  skills.push(...getSkillsByIds(project.associatedSkills));
+
+  // remove duplicates
+  const skillsSet = new Set(skills);
+
+  return Array.from(skillsSet);
+};
+
+const getWorkExperienceByProjectIds = (projectIds: string[]): WorkExperience[] => {
+  const experiences = workExperiences.filter((experience) =>
+    experience.associatedProjects.some((projectId) => projectIds.includes(projectId))
+  );
+  return experiences;
 };
 
 export const getSkillsByExperienceId = (experienceId: string): Skill[] => {

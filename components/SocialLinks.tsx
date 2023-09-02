@@ -34,20 +34,18 @@ const socials: Social[] = [
 
 export default function SocialLinks() {
   return (
-    <div className='mt-4 flex justify-start gap-4 lg:gap-6'>
+    <div className='mt-4 flex items-center justify-around gap-4 lg:justify-start lg:gap-10'>
       {socials.map((social, index) => {
         return (
-          <div key={index} className='flex flex-col items-center gap-2'>
-            <Link href={social.url} target='_blank'>
-              <Icon
-                icon={social.icon}
-                width={30}
-                height={30}
-                style={{ color: 'black' }}
-                className='text-black'
-              />
-            </Link>
-          </div>
+          <Link key={index} href={social.url} target='_blank'>
+            <Icon
+              icon={social.icon}
+              width={30}
+              height={30}
+              style={{ color: 'black' }}
+              className='text-black'
+            />
+          </Link>
         );
       })}
     </div>

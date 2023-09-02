@@ -73,7 +73,7 @@ export const workExperiences: WorkExperience[] = [
       'Participated in the development and maintenance of the Chat feature. Collaborated with other developers to identify and alleviate software bugs.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/spotlas-img-1.png?alt=media&token=06585427-a04e-463a-93b8-3cccd78dc0e1',
-    associatedSkills: ['rest-api'],
+    associatedSkills: ['rest-api', 'mongodb'],
     associatedProjects: ['spotlas'],
   },
   {

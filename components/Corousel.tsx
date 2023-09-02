@@ -1,9 +1,9 @@
 import React, { ReactNode, useState, useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface CarouselProps<T> {
   items: T[];
+  // eslint-disable-next-line no-unused-vars
   renderItem: (item: T) => React.ReactNode;
   autoplayInterval?: number;
   prevIcon?: ReactNode;
@@ -18,7 +18,7 @@ export function Carousel<T>({
   nextIcon = <Icon icon='ic:baseline-arrow-forward' fontSize={20} />,
 }: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [autoplay, setAutoplay] = useState(true);
+  const [autoplay] = useState(true);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -54,26 +54,7 @@ export function Carousel<T>({
         {nextIcon}
       </button>
 
-      <div
-        className='flex h-full w-full'
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        <AnimatePresence initial={false}>
-          {items.map((item, index) => (
-            <motion.div
-              key={index}
-              className='h-full w-full'
-              style={{ display: `${index === currentIndex ? 'block' : 'none'}` }}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-            >
-              {renderItem(item)}
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
+      <div className=''>{items[currentIndex] && renderItem(items[currentIndex])}</div>
     </div>
   );
 }
