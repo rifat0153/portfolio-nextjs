@@ -18,7 +18,7 @@ export default function ExperinceCard({ experience }: { experience: WorkExperien
   const getSkills = (): Skill[] => getSkillsByExperienceId(experience.id);
 
   return (
-    <button
+    <div
       tabIndex={0}
       className='w-full cursor-pointer rounded-lg p-4 text-left shadow-lg @container  focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
                focus:ring-offset-gray-100 active:outline-none'
@@ -66,6 +66,6 @@ export default function ExperinceCard({ experience }: { experience: WorkExperien
           </div>
         </div>
       </div>
-    </button>
+    </div>
   );
 }
