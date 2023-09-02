@@ -1,5 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const containerQueryPlugin = require('@tailwindcss/container-queries');
+const { nextui } = require('@nextui-org/react');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,6 +9,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx}',
   ],
@@ -19,13 +22,17 @@ module.exports = {
       },
       fontSize: {
         '7xl': '5rem',
-        md: '1.125rem',
+        md: '16px',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        inter: ['var(--font-inter)'],
         alegreya: ['var(--font-alegreya)'],
+      },
+      transitionProperty: {
+        width: 'width',
+        height: 'height',
       },
     },
   },
-  plugins: [],
+  plugins: [containerQueryPlugin, nextui()],
 };
