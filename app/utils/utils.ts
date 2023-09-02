@@ -1,9 +1,16 @@
 import { workExperiences } from '../experiences/experinces';
 import { softwareProjects } from '../projects/projects';
-import { Skill, softwareSkills } from '../skills/skills';
+import { Skill, SkillIDType, softwareSkills } from '../skills/skills';
 
 const getSkillsByIds = (ids: string[]): Skill[] => {
   return softwareSkills.filter((skill) => ids.includes(skill.id));
+};
+
+export const getWorkExperienceBySkillId = (skillId: SkillIDType) => {
+  const experiences = workExperiences.filter((experience) =>
+    experience.associatedSkills.includes(skillId)
+  );
+  return experiences;
 };
 
 export const getWorkExperienceByIds = (ids: string[]) => {
