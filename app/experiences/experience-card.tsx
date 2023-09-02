@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Tooltip } from '@nextui-org/react';
 
-import { Skill, softwareSkills } from '../skills/skills';
+import { Skill } from '../skills/skills';
 import { WorkExperience } from './experinces';
-import { Icon } from '@iconify/react';
+import { SkillChips } from '../skills/skill_chips';
+import { getSkillsByExperienceId } from '../utils/utils';
 
 export default function ExperinceCard({ experience }: { experience: WorkExperience }) {
   const router = useRouter();
@@ -15,24 +15,12 @@ export default function ExperinceCard({ experience }: { experience: WorkExperien
     router.push(`/experiences/${experience.id}`);
   };
 
-  const navigateToSkill = (id: string, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.stopPropagation();
-
-    router.push(`/skills/${id}`);
-  };
-
-  const getSkills = (): Skill[] => {
-    const skillIds = experience.associatedSkills;
-
-    const skills = softwareSkills.filter((skill) => skillIds.includes(skill.id));
-
-    return skills;
-  };
+  const getSkills = (): Skill[] => getSkillsByExperienceId(experience.id);
 
   return (
-    <div
+    <button
       tabIndex={0}
-      className='cursor-pointer rounded-lg p-4 shadow-lg @container  focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+      className='w-full cursor-pointer rounded-lg p-4 text-left shadow-lg @container  focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
                focus:ring-offset-gray-100 active:outline-none'
       aria-describedby={`experience-${experience.id}-job-title experience-${experience.id}-company experience-${experience.id}-duration experience-${experience.id}-country experience-${experience.id}-description`}
       onClick={navigateToExperience}
@@ -74,21 +62,10 @@ export default function ExperinceCard({ experience }: { experience: WorkExperien
           <p className='mt-2 text-md leading-6'>{experience.description}</p>
 
           <div className='mt-8 flex flex-wrap gap-8'>
-            {getSkills().map((skill) => (
-              <Tooltip
-                key={skill.id}
-                content={<p>{skill.name}</p>}
-                placement='bottom'
-                className='border-none'
-              >
-                <button onClick={(e) => navigateToSkill(skill.id, e)}>
-                  <Icon icon={skill.icon} fontSize={20} />
-                </button>
-              </Tooltip>
-            ))}
+            <SkillChips skills={getSkills()} />
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 }

@@ -35,7 +35,7 @@ export const workExperiences: WorkExperience[] = [
       "Built a brand new anomaly detection system for Network Rail to remotely monitor rail stations and early problem detection. Developed internal dashboards for statistical data analysis, making it a single source to analyze product performance and take necessary actions. Performed regression and system-level testing to verify software quality and function prior to release. Collaborated with team members to create applications' system analysis based on client requirements.",
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/senceive-1.png?alt=media&token=aec7c648-318c-4757-8275-6266b7cfeff7',
-    associatedSkills: ['vuejs', 'dotnet', 'csharp', 'azure', 'typescript', 'javascript'],
+    associatedSkills: ['unit-testing'],
     associatedProjects: ['signal-box', 'production-dashboard'],
   },
   {
@@ -47,7 +47,7 @@ export const workExperiences: WorkExperience[] = [
     description:
       'Engineered and led a client restaurant application with admin panel (web) using Flutter and Dart. Managed a team of two Flutter developers, giving leadership experience. Transitioned the project to a mono repo structure, leading to easier project management.',
 
-    associatedSkills: ['flutter', 'dart', 'firebase'],
+    associatedSkills: [],
     associatedProjects: ['elvan-restaurant-app'],
   },
   {
@@ -60,7 +60,7 @@ export const workExperiences: WorkExperience[] = [
       'Built "The Daily Star - Bangladesh" mobile app for both iOS and Android platforms with 10,000+ daily active users and 100k+ downloads. Improved app scrolling performance by 30%, implementing nested scroll views and proper data caching. Reduced the number of crashes on Android devices.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/RSI-Lab-1.png?alt=media&token=395b538e-83fc-4760-88e1-afd2a8bf9e8e',
-    associatedSkills: ['flutter', 'dart', 'nodejs'], // Fill this out based on the specific skills you used for this job
+    associatedSkills: ['flutter', 'dart', 'nodejs', 'rest-api', 'firebase'],
     associatedProjects: ['daily-star-app'],
   },
   {
@@ -73,7 +73,7 @@ export const workExperiences: WorkExperience[] = [
       'Participated in the development and maintenance of the Chat feature. Collaborated with other developers to identify and alleviate software bugs.',
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/spotlas-img-1.png?alt=media&token=06585427-a04e-463a-93b8-3cccd78dc0e1',
-    associatedSkills: ['flutter', 'dart'],
+    associatedSkills: ['rest-api'],
     associatedProjects: ['spotlas'],
   },
   {
@@ -94,6 +94,7 @@ export const workExperiences: WorkExperience[] = [
       'firebase',
       'google-cloud-run',
       'docker',
+      'rest-api',
     ],
     associatedProjects: ['aalokito'],
   },

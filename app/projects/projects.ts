@@ -59,7 +59,7 @@ export const softwareProjects: Project[] = [
     name: 'Client Restaurant Application',
     description:
       'Engineered and led a client restaurant application with an admin panel. The project utilized a mono repo structure for easier management.',
-    url: 'https://elvan-restaurantapp.com/', // Placeholder URL, replace with the actual URL
+    url: 'https://elvan-restaurantapp.com/',
     associatedSkills: ['flutter', 'dart', 'firebase'],
   },
   {
@@ -67,21 +67,21 @@ export const softwareProjects: Project[] = [
     name: 'The Daily Star - Bangladesh Mobile App',
     description:
       'Developed a mobile app for both iOS and Android platforms. The app has over 10000+ daily active users with 100k+ downloads.',
-    url: 'https://thedailystarapp.com/', // Placeholder URL, replace with the actual URL
+    url: 'https://thedailystarapp.com/',
     associatedSkills: ['flutter'],
   },
   {
     id: projectIDs.spotlas,
     name: 'Spotlas Chat Feature',
     description: 'Participated in the development and maintenance of the chat feature for Spotlas.',
-    url: 'https://spotlasapp.com/', // Placeholder URL, replace with the actual URL
+    url: 'https://spotlasapp.com/',
     associatedSkills: ['flutter'],
   },
   {
     id: projectIDs.aalokito,
     name: 'Charity App',
     description: 'Developed a charity app with Flutter, NodeJs (Express) and MongoDB from scratch.',
-    url: 'https://charityapp.com/', // Placeholder URL, replace with the actual URL
+    url: 'https://charityapp.com/',
     associatedSkills: ['flutter', 'nodejs', 'mongodb', 'google-cloud-run', 'docker'],
   },
   {
@@ -89,7 +89,7 @@ export const softwareProjects: Project[] = [
     name: 'Personal Portfolio Website',
     description:
       'A showcase of my work and skills, developed using NextJs, TypeScript, and TailwindCSS.',
-    url: 'https://mahbubur-portfolio.com/', // Placeholder URL, replace with your actual portfolio link
+    url: 'https://mahbubur-portfolio.com/',
     associatedSkills: ['nextjs', 'typescript', 'tailwindcss'],
   },
 ];
