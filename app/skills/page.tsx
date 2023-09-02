@@ -41,10 +41,15 @@ export default function SkillsPage() {
         />
       </div>
 
-      <div className='grid grid-cols-3 gap-4'>
+      {/* <div className='grid grid-cols-3 gap-4'> */}
+      <div className='columns-3'>
         {skillList.map((skill) => {
           return (
-            <div key={skill.id} className='col-span-3 lg:col-span-1'>
+            <div
+              key={skill.id}
+              // className='col-span-3 first:col-span-2 lg:col-span-1 [&>*:nth-child(odd)]:col-span-2 '
+              className=''
+            >
               <SkillCard skill={skill} onPress={handleNavigation} />
             </div>
           );

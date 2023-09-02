@@ -18,11 +18,11 @@ export function SkillCard({
   };
 
   return (
-    <div className='transform transition-colors duration-1000' onClick={handlePress}>
+    <div className='transform cursor-pointer transition-colors duration-1000' onClick={handlePress}>
       <Card
         onPress={handlePress}
-        className='group mb-4 transform bg-gradient-to-r ring-offset-2 transition-all duration-250 hover:bg-gradient-to-br hover:from-gray-100
-               hover:to-blue-200  hover:transition-all focus:ring-2 '
+        className='group z-0 mb-4 transform bg-gradient-to-r ring-offset-2 transition-all duration-250 hover:z-30 
+              hover:scale-105 hover:bg-gradient-to-br  hover:from-gray-100 hover:to-blue-200 hover:transition-all focus:ring-2 '
         aria-describedby='skill-card'
         tabIndex={0}
       >
@@ -49,14 +49,15 @@ export function SkillCard({
           </div>
         </CardBody>
 
-        <CardFooter>
+        {/* <CardFooter>
           <button
             onClick={handlePress}
             className='flex items-center gap-4 text-sm font-semibold transition-all duration-250 group-hover:translate-x-2'
           >
-            <span>View Details</span> <Icon icon='bytesize:external' fontSize={20} />
+            <span className='hidden group-hover:block'>View Details</span>{' '}
+            <Icon icon='bytesize:external' fontSize={20} />
           </button>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
     </div>
   );

@@ -44,7 +44,7 @@ export const softwareSkills: Skill[] = [
     description:
       'Throughout my career, I’ve heavily leaned on C# for backend development. This expertise has been instrumental in creating robust systems, especially in tandem with .Net Core. My work on the anomaly detection system for Network Rail stands as a testament to my capabilities with C#.',
     url: 'https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
-    tags: ['Backend', 'Network Rail', 'Anomaly Detection', '.Net Core'],
+    tags: ['Backend', 'Rest Api', 'Sql Server', 'Network Rail', 'Anomaly Detection', '.Net Core'],
   },
   {
     id: skillIDs.Dotnet,
@@ -62,7 +62,7 @@ export const softwareSkills: Skill[] = [
     description:
       'Integrating TypeScript with tools like React and Vue.js, I’ve ensured my applications are type-safe and efficient. It’s not just about writing code; it’s about writing scalable and maintainable code, and TypeScript helps me achieve that.',
     url: 'https://www.typescriptlang.org/',
-    tags: ['Type-safe', 'React', 'Vue.js', 'Maintainable'],
+    tags: ['Zod', 'Nuxt', 'Vue.js', 'Next'],
   },
   {
     id: skillIDs.Javascript,
@@ -71,7 +71,7 @@ export const softwareSkills: Skill[] = [
     description:
       'JavaScript remains central to my development toolkit, enabling me to create dynamic and interactive applications. My expertise, combined with frameworks like React, Vue.js, and Next.js, has powered numerous projects, enhancing user interactions and overall efficiency.',
     url: 'https://developer.mozilla.org/en-US/',
-    tags: ['Dynamic', 'Interactive', 'React', 'Vue.js', 'Next.js', 'Efficiency'],
+    tags: ['NodeJs', 'React', 'Vue.js', 'Next.js'],
   },
   {
     id: skillIDs.VueJs,
@@ -80,7 +80,7 @@ export const softwareSkills: Skill[] = [
     description:
       'I’ve always found Vue.js to be a powerful tool for frontend development. Leveraging Vue 3 and complementary tools like Nuxt, I’ve developed intuitive dashboards and applications that emphasize user experience and dynamic web interactions.',
     url: 'https://vuejs.org/',
-    tags: ['Frontend', 'Vue 3', 'Nuxt', 'User Experience', 'Dynamic Web Interactions'],
+    tags: ['Pinia', 'Nuxt', 'User Experience', 'SPA'],
   },
   {
     id: skillIDs.NextJs,
