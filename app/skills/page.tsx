@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from '@nextui-org/react';
-import { softwareSkills } from './skills';
 import { useRouter } from 'next/navigation';
+import { Input } from '@nextui-org/react';
+
+import { softwareSkills } from './skills';
 import { SkillCard } from './skill_card';
 
 export default function SkillsPage() {
@@ -31,7 +32,7 @@ export default function SkillsPage() {
   };
 
   return (
-    <div className='lg:pt-[2vh]'>
+    <div className='@container lg:pt-[2vh]'>
       <div className='py-4 lg:py-8'>
         <Input
           type='text'
@@ -41,15 +42,10 @@ export default function SkillsPage() {
         />
       </div>
 
-      {/* <div className='grid grid-cols-3 gap-4'> */}
-      <div className='columns-3'>
+      <div className='@2xl:columns-2 @3xl:columns-3'>
         {skillList.map((skill) => {
           return (
-            <div
-              key={skill.id}
-              // className='col-span-3 first:col-span-2 lg:col-span-1 [&>*:nth-child(odd)]:col-span-2 '
-              className=''
-            >
+            <div key={skill.id} className=''>
               <SkillCard skill={skill} onPress={handleNavigation} />
             </div>
           );
