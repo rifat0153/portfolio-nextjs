@@ -1,6 +1,6 @@
 'use client';
 
-import { getWorkExperiencesBySkillId } from '@/app/utils/utils';
+import { getWorkExperiencesBySkillId } from '@/app/experiences/experinces';
 import { Chip } from '@nextui-org/react';
 import { softwareSkills } from '../skills';
 import ExperinceChip from './experince_chip';
