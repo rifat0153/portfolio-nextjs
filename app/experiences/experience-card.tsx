@@ -3,10 +3,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import { Skill } from '../skills/skills';
+import { getSkillsByExperienceId, Skill } from '../skills/skills';
 import { WorkExperience } from './experinces';
 import { SkillChips } from '../skills/skill_chips';
-import { getSkillsByExperienceId } from '../utils/utils';
 
 export default function ExperinceCard({ experience }: { experience: WorkExperience }) {
   const router = useRouter();

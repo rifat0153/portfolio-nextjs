@@ -25,6 +25,10 @@ export type ProjectUrl = {
   url: string;
 };
 
+export const getSoftwareProjectsByIds = (ids: string[]) => {
+  return softwareProjects.filter((project) => ids.includes(project.id));
+};
+
 export const softwareProjects: Project[] = [
   {
     id: projectIDs.signalBox,

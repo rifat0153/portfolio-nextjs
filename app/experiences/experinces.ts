@@ -1,5 +1,5 @@
 import { projectIDs } from '../projects/projects';
-import { skillIDs } from '../skills/skills';
+import { getSkillsByExperienceId, skillIDs, SkillIDType } from '../skills/skills';
 
 export const experienceIDs = {
   Senceive: 'senceive',
@@ -23,6 +23,24 @@ export interface WorkExperience {
   associatedSkills: (typeof skillIDs)[keyof typeof skillIDs][];
   associatedProjects: (typeof projectIDs)[keyof typeof projectIDs][];
 }
+
+export const getWorkExperienceByIds = (ids: string[]) => {
+  return workExperiences.filter((experience) => ids.includes(experience.id));
+};
+
+export const getWorkExperiencesBySkillId = (skillId: SkillIDType) => {
+  const experiences = workExperiences.filter((experience) =>
+    getSkillsByExperienceId(experience.id).some((skill) => skill.id === skillId)
+  );
+  return experiences;
+};
+
+export const getWorkExperienceByProjectIds = (projectIds: string[]): WorkExperience[] => {
+  const experiences = workExperiences.filter((experience) =>
+    experience.associatedProjects.some((projectId) => projectIds.includes(projectId))
+  );
+  return experiences;
+};
 
 export const workExperiences: WorkExperience[] = [
   {

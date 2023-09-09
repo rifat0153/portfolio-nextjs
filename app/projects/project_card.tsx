@@ -5,8 +5,8 @@ import { Icon } from '@iconify/react';
 
 import { Project } from './projects';
 import { SkillChips } from '../skills/skill_chips';
-import { getSkillsByProjectId } from '../utils/utils';
 import { useRouter } from 'next/navigation';
+import { getSkillsByProjectId } from '../skills/skills';
 
 export default function ProjectCard({ project }: { project: Project }) {
   const router = useRouter();
