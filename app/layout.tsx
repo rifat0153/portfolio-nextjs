@@ -6,12 +6,14 @@ import { Alegreya, Inter } from 'next/font/google';
 import './globals.css';
 
 import { NextUIProvider } from '@nextui-org/react';
+import DynamicBreadcrumbs from '@/components/DynamicBreadcrumbs';
+import { useRouter } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const alegreya = Alegreya({ subsets: ['latin'], variable: '--font-alegreya' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // const [darkMode, toggleDarkMode] = useDarkMode();
+  const router = useRouter();
 
   return (
     <html lang='en'>
@@ -27,14 +29,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ${false ? 'dark' : ''}
           ${alegreya.variable} ${inter.variable} font-sans`}
       >
-        <NextUIProvider>
+        <NextUIProvider navigate={router.push}>
           <div className='w-full'>
             <div className='mx-auto max-w-6xl '>
               <nav className='sticky top-0 z-20'>
                 <Header />
               </nav>
               <main className='w-full p-4 pb-10 transition-colors duration-500 dark:bg-gray-900 lg:p-0 lg:pb-40'>
-                <div className='mx-auto w-full max-w-5xl'>{children}</div>
+                <div className='mx-auto w-full max-w-5xl'>
+                  <div className='my-2'>
+                    <DynamicBreadcrumbs />
+                  </div>
+
+                  {children}
+                </div>
               </main>
             </div>
           </div>

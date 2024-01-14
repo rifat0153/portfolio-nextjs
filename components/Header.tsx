@@ -6,7 +6,7 @@ const Header = () => {
   const path = usePathname();
   const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK || '';
 
-  const linkClass = (currentPath: string) => (path == currentPath ? 'text-blue-500' : '');
+  const linkClass = (currentPath: string) => (path.includes(currentPath) ? 'text-blue-500' : '');
 
   return (
     <div className='flex w-full items-center justify-between bg-gradient-to-b from-white to-white/90 px-4 py-4'>
