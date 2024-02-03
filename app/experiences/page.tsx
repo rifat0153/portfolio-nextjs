@@ -7,7 +7,7 @@ export default function ExperiencesPage() {
   return (
     <div className='my-8 lg:my-20'>
       {experiences.map((experience, idx) => (
-        <div key={idx} className='p-4'>
+        <div key={idx} className='py-2 sm:p-4'>
           <ExperinceCard experience={experience} />
         </div>
       ))}
