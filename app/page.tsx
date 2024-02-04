@@ -7,7 +7,7 @@ import { Suspense } from 'react';
 export default function Home() {
   return (
     <>
-      <div className='grid grid-cols-12 gap-4 gap-y-20 pb-20 pt-8 sm:pb-[35vh] lg:gap-20 lg:gap-y-0 lg:pt-[30vh]'>
+      <div className='grid grid-cols-12 gap-4 gap-y-20 pt-8 lg:gap-20 lg:gap-y-0 lg:pt-[30vh]'>
         <div className='col-span-12 sm:text-xl lg:col-span-8'>
           <p className='break-words text-left leading-7 sm:leading-10'>
             Hi, I am
@@ -37,11 +37,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className='px-4 py-32 lg:px-0 lg:pb-[35vh] lg:pt-8'>
-        <SocialLinks />
-      </div> */}
-
-      <section>
+      <section className='mt-32 sm:mt-[40vh]'>
         <Disclaimer />
       </section>
     </>

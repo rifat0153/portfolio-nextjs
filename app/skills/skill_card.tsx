@@ -1,7 +1,7 @@
 'use client';
 
 import { Icon } from '@iconify/react';
-import { Card, CardBody, CardFooter, CardHeader, Chip } from '@nextui-org/react';
+import { Card, CardBody, CardHeader, Chip } from '@nextui-org/react';
 
 import { Skill } from './skills';
 

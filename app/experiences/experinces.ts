@@ -54,7 +54,7 @@ export const workExperiences: WorkExperience[] = [
     image:
       'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/senceive-1.png?alt=media&token=aec7c648-318c-4757-8275-6266b7cfeff7',
     associatedSkills: ['unit-testing'],
-    associatedProjects: ['signal-box', 'production-dashboard'],
+    associatedProjects: [ 'web-monitor-4','signal-box', 'production-dashboard'],
   },
   {
     id: experienceIDs.ElvanAB,
