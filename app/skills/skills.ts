@@ -2,6 +2,8 @@ import { getWorkExperienceByProjectIds, workExperiences } from '../experiences/e
 import { ProjectIDType, softwareProjects } from '../projects/projects';
 
 export const skillIDs = {
+  Dapper: 'dapper',
+  CleanArchitecture: 'clean-architecture',
   Csharp: 'csharp',
   Dotnet: 'dotnet',
   SqlServer: 'sql-server',
@@ -93,7 +95,7 @@ export const softwareSkills: Skill[] = [
     description:
       'Throughout my career, I’ve heavily leaned on C# for backend development. This expertise has been instrumental in creating robust systems, especially in tandem with .Net Core. My work on the anomaly detection system for Network Rail stands as a testament to my capabilities with C#.',
     url: 'https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
-    tags: ['Backend', 'Rest Api', 'Sql Server', 'Network Rail', 'Anomaly Detection', '.Net Core'],
+    tags: ['Functional Programming', 'Backend', 'Robust Systems', '.Net Core'],
   },
   {
     id: skillIDs.Dotnet,
@@ -102,7 +104,7 @@ export const softwareSkills: Skill[] = [
     description:
       '.NET Core reflects my prowess in backend development. I’ve used it to craft robust solutions, such as the system for Network Rail, ensuring they’re both high-performing and scalable.',
     url: 'https://dotnet.microsoft.com/en-us/',
-    tags: ['Backend', 'Network Rail', 'High-Performance', 'Scalable'],
+    tags: ['Rest API', 'Backend', 'High-Performing', 'Scalable', 'SqlServer', 'Dapper', 'Clean Architecture'],
   },
   {
     id: skillIDs.Typescript,
@@ -111,7 +113,7 @@ export const softwareSkills: Skill[] = [
     description:
       'Integrating TypeScript with tools like React and Vue.js, I’ve ensured my applications are type-safe and efficient. It’s not just about writing code; it’s about writing scalable and maintainable code, and TypeScript helps me achieve that.',
     url: 'https://www.typescriptlang.org/',
-    tags: ['Zod', 'Nuxt', 'Vue.js', 'Next'],
+    tags: ['Zod', 'Nuxt.js', 'Vue.js', 'Next.js'],
   },
   {
     id: skillIDs.Javascript,
@@ -283,5 +285,23 @@ export const softwareSkills: Skill[] = [
       'Docker has revolutionized my workflow by allowing me to containerize applications, ensuring consistency across different environments. Building, shipping, and running applications have never been so straightforward.',
     url: 'https://www.docker.com/',
     tags: ['Containerization', 'Deployment', 'Consistency'],
+  },
+  {
+    id: skillIDs.Dapper,
+    name: 'Dapper',
+    icon: 'devicon:csharp',
+    description:
+      'Dapper has been my go-to for database operations, offering a simple and high-performance solution for data access. It’s been instrumental in ensuring optimal performance and scalability in my applications.',
+    url: 'https://dapper-tutorial.net/',
+    tags: ['Database', 'High-Performance', 'Data Access'],
+  },
+  {
+    id: skillIDs.CleanArchitecture,
+    name: 'Clean Architecture',
+    icon: 'vscode-icons:file-type-asp',
+    description:
+      'Clean Architecture has been pivotal in my development journey, ensuring that my applications are scalable, maintainable, and testable. It has allowed me to create robust and high-quality software solutions.',
+    url: 'https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles',
+    tags: ['Scalable', 'Maintainable', 'Testable', 'Robust'],
   },
 ];

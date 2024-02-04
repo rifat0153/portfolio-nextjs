@@ -1,6 +1,7 @@
 import { skillIDs } from '../skills/skills';
 
 export const projectIDs = {
+  webMonitor4: 'web-monitor-4',
   signalBox: 'signal-box',
   productionDashboard: 'production-dashboard',
   elvanRestaurantApp: 'elvan-restaurant-app',
@@ -31,6 +32,30 @@ export const getSoftwareProjectsByIds = (ids: string[]) => {
 
 export const softwareProjects: Project[] = [
   {
+    id: projectIDs.webMonitor4,
+    name: 'Monitoring System - Senceive',
+    description:
+      'Led the rewrite of the alert monitoring system for Senceive, which is used to monitor the health of critical infrastructure. The system was built using .Net Core, Vue3, and TailwindCSS, and was hosted on Azure.',
+    link: {
+      type: 'internal',
+      url: '/experiences/senceive',
+    },
+    associatedSkills: [
+      'csharp',
+      'dotnet',
+      'clean-architecture',
+      'dapper',
+      'sql-server',
+      'dapper',
+      'vuejs',
+      'nuxtjs',
+      'tailwindcss',
+      'azure',
+      'typescript',
+      'rest-api'
+    ],
+  },
+  {
     id: projectIDs.signalBox,
     name: 'Anomaly Detection System',
     description:
@@ -48,6 +73,7 @@ export const softwareProjects: Project[] = [
       'tailwindcss',
       'azure',
       'typescript',
+      'rest-api'
     ],
   },
   {
@@ -67,6 +93,7 @@ export const softwareProjects: Project[] = [
       'tailwindcss',
       'typescript',
       'vuejs',
+      'rest-api'
     ],
   },
   {
@@ -78,7 +105,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://github.com/rifat0153/elvan-monorepo',
     },
-    associatedSkills: ['flutter', 'dart', 'firebase'],
+    associatedSkills: ['flutter', 'dart', 'firebase', ],
   },
   {
     id: projectIDs.dailyStarApp,
@@ -89,7 +116,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://apps.apple.com/us/app/the-daily-star/id589009555',
     },
-    associatedSkills: ['flutter', 'dart', 'firebase', 'nodejs'],
+    associatedSkills: ['flutter', 'dart', 'firebase', 'nodejs', 'rest-api'],
   },
   {
     id: projectIDs.spotlas,
@@ -99,7 +126,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://apps.apple.com/gb/app/spotlas/id1464125251',
     },
-    associatedSkills: ['flutter', 'rest-api'],
+    associatedSkills: ['flutter', 'rest-api',],
   },
   {
     id: projectIDs.aalokito,
@@ -109,7 +136,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://github.com/rifat0153/Alokito-App',
     },
-    associatedSkills: ['flutter', 'nodejs', 'mongodb', 'google-cloud-run', 'docker'],
+    associatedSkills: ['flutter', 'nodejs', 'mongodb', 'google-cloud-run', 'docker', 'rest-api'],
   },
   {
     id: projectIDs.personalPortfolio,

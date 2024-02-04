@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@nextui-org/react';
 import { Icon } from '@iconify/react';
 import { Carousel } from './Corousel';
 import Link from 'next/link';
@@ -22,6 +23,22 @@ export function SkillsCarousel() {
           );
         }}
       />
+
+      <Link href='/skills'>
+        <Button
+          className='mt-4 sm:mt-10'
+          variant='bordered'
+          size='sm'
+          color='secondary'
+          endContent={<AnchorIcon />}
+        >
+          View All Skills
+        </Button>
+      </Link>
     </div>
   );
 }
+
+const AnchorIcon = () => {
+  return <Icon icon='mdi:link' />;
+};
