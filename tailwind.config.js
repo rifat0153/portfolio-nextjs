@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 const containerQueryPlugin = require('@tailwindcss/container-queries');
+const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons');
 const { nextui } = require('@nextui-org/react');
 
 /** @type {import('tailwindcss').Config} */
@@ -34,5 +35,33 @@ module.exports = {
       },
     },
   },
-  plugins: [containerQueryPlugin, nextui()],
+  plugins: [
+    containerQueryPlugin,
+    iconsPlugin({
+      // Select the icon collections you want to use
+      // You can also ignore this option to automatically discover all individual icon packages you have installed
+      // If you install @iconify/json, you should explicitly specify the collections you want to use, like this:
+      collections: getIconCollections([
+        'mdi',
+        'lucide',
+        'devicon',
+        'logos',
+        'fa6-brands',
+        'tabler',
+        'devicon-plain',
+        'icon-park',
+        'ic',
+        'vscode-icons',
+        'bytesize',
+        'uil',
+        'fe',
+        'bx',
+        'ph',
+      ]),
+      // If you want to use all icons from @iconify/json, you can do this:
+      // collections: getIconCollections("all"),
+      // and the more recommended way is to use `dynamicIconsPlugin`, see below.
+    }),
+    nextui(),
+  ],
 };

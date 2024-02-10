@@ -1,8 +1,6 @@
-import CarouselSkeleton from '@/components/CarouselSkeleton';
 import Disclaimer from '@/components/Disclaimer';
 import { SkillsCarousel } from '@/components/SkillsCarousel';
 import SocialLinks from '@/components/SocialLinks';
-import { Suspense } from 'react';
 
 export default function Home() {
   return (
@@ -31,9 +29,7 @@ export default function Home() {
         </div>
 
         <div className='col-span-12 inline-flex items-center justify-center text-center lg:col-span-4'>
-          <Suspense fallback={<CarouselSkeleton />}>
-            <SkillsCarousel />
-          </Suspense>
+          <SkillsCarousel />
         </div>
       </div>
 

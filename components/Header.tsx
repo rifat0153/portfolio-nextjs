@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Icon } from '@iconify/react';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -12,20 +11,20 @@ const Header = () => {
     <div className='flex w-full items-center justify-between bg-gradient-to-b from-white to-white/90 px-4 py-4'>
       <div>
         <Link href='/' className={`flex items-center font-bold ${linkClass('/')}`}>
-          <Icon icon='icon-park:left' />
-          <Icon icon='icon-park:right' />
+          <span className='i-icon-park-left' />
+          <span className='i-icon-park-right' />
           <span className='hidden lg:block'>&nbsp; Mahbubur Rahman</span>
         </Link>
       </div>
 
       <div className='flex items-center justify-center gap-10'>
         <Link href='/skills' className={`flex items-center gap-2 ${linkClass('/skills')}`}>
-          <Icon icon='ic:baseline-bookmark' />
+          <span className='i-ic-baseline-bookmark' />
           <p className='hidden lg:block'>Skills</p>
         </Link>
 
         <Link href='/projects' className={`flex items-center gap-2 ${linkClass('/projects')}`}>
-          <Icon icon='fe:tiled' />
+          <span className='i-fe-tiled' />
           <p className='hidden lg:block'>Projects</p>
         </Link>
 
@@ -33,7 +32,7 @@ const Header = () => {
           href='/experiences'
           className={`flex items-center gap-2 ${linkClass('/experiences')}`}
         >
-          <Icon icon='ph:briefcase-fill' />
+          <span className='i-ph-briefcase-fill' />
           <p className='hidden lg:block'>Experiences</p>
         </Link>
       </div>
@@ -43,7 +42,7 @@ const Header = () => {
         className={`flex items-center gap-2 ${linkClass(resumeLink)}`}
         target='_blank'
       >
-        <Icon icon='bx:file' />
+        <span className='i-bx-file' />
         <p className='hidden lg:block'>Resume</p>
       </Link>
     </div>

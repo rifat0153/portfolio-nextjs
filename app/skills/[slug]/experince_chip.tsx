@@ -1,8 +1,7 @@
+import Link from 'next/link';
 import { workExperiences } from '@/app/experiences/experinces';
-import { useRouter } from 'next/navigation';
 
-export default function ExperinceChip({ expIdx, idx }: { expIdx: string; idx: number }) {
-  const router = useRouter();
+export default function ExperienceChip({ expIdx, idx }: { expIdx: string; idx: number }) {
   const experience = workExperiences.find((exp) => exp.id === expIdx);
 
   const textColors = [
@@ -16,23 +15,20 @@ export default function ExperinceChip({ expIdx, idx }: { expIdx: string; idx: nu
     '#F7C948',
   ];
 
-  function handleNavigation() {
-    router.push(`/experiences/${experience?.id}`);
-  }
-
   if (!experience) {
     return <span></span>;
   }
 
   return (
-    <button
-      onClick={handleNavigation}
-      className='rounded-lg border-1 border-black px-2 py-1 text-sm'
-      style={{
-        color: textColors[idx % textColors.length],
-      }}
-    >
-      {experience.jobTitle} @ {experience.company}
-    </button>
+    <Link href={`/experiences/${experience?.id}`}>
+      <p
+        className='rounded-lg border-1 border-black px-2 py-1 text-sm'
+        style={{
+          color: textColors[idx % textColors.length],
+        }}
+      >
+        {experience.jobTitle} @ {experience.company}
+      </p>
+    </Link>
   );
 }

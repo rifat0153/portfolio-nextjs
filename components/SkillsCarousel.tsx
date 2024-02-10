@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@nextui-org/react';
-import { Icon } from '@iconify/react';
 import { Carousel } from './Corousel';
 import Link from 'next/link';
 import { softwareSkills } from '@/app/skills/skills';
@@ -15,7 +14,7 @@ export function SkillsCarousel() {
           return (
             <div>
               <Link href={skill.url} target='_blank' rel='noopener noreferrer'>
-                <Icon icon={skill.icon} className='inline-flex justify-center' fontSize={120} />
+                <span className={`${skill.icon} text-7xl`} />
               </Link>
 
               <p className='mt-4 font-semibold'>{skill.name}</p>
@@ -40,5 +39,5 @@ export function SkillsCarousel() {
 }
 
 const AnchorIcon = () => {
-  return <Icon icon='mdi:link' />;
+  return <span className='i-mdi-link' />;
 };
