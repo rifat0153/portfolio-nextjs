@@ -1,34 +1,21 @@
-'use client';
-
+import Link from 'next/link';
 import { Card } from '@nextui-org/react';
 
 import { Project } from './projects';
 import { SkillChips } from '../skills/skill_chips';
-import { useRouter } from 'next/navigation';
 import { getSkillsByProjectId } from '../skills/skills';
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const router = useRouter();
-
   const getSkills = () => getSkillsByProjectId(project.id);
 
-  const navigateToProject = () => {
-    console.log(project.id);
+  const icon = () => (project.link.type === 'external' ? 'i-bytesize-external' : 'i-uil-link');
 
-    if (project.link.type === 'external') {
-      window.open(project.link.url, '_blank');
-      return;
-    }
-
-    router.push(project.link.url);
-  };
-
-  const icon = () => {
-    if (project.link.type === 'external') {
-      return 'i-bytesize-external';
-    }
-
-    return 'i-uil-link';
+  const ProjectLink = () => {
+    return (
+      <Link href={project.link.url} target={project.link.type === 'internal' ? '_self' : '_blank'}>
+        <span className={icon()}></span>
+      </Link>
+    );
   };
 
   return (
@@ -36,9 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className='flex w-full items-start justify-between'>
         <p className='text-xl'>{project.name}</p>
 
-        <button onClick={navigateToProject}>
-          <span className={icon()}></span>
-        </button>
+        <ProjectLink />
       </div>
 
       <p className='pt-4 text-sm leading-6'>{project.description}</p>
