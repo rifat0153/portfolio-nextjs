@@ -36,7 +36,8 @@ export function SkillChips({
           className='border-none'
         >
           <button onClick={(e) => handleClick(skill, e)}>
-            <Icon icon={skill.icon} fontSize={20} />
+            <span className={skill.icon}></span>
+            {/* <Icon icon={skill.icon} fontSize={20} /> */}
           </button>
         </Tooltip>
       ))}

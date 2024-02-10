@@ -1,4 +1,4 @@
-import ExperinceCard from './experience-card';
+import ExperinceCard from './experience_card';
 import { workExperiences } from './experinces';
 
 export default function ExperiencesPage() {

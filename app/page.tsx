@@ -26,7 +26,9 @@ export default function Home() {
           </p>
 
           <div className='pt-4 lg:pt-4'>
-            <SocialLinks />
+            <Suspense fallback={<p></p>}>
+              <SocialLinks />
+            </Suspense>
           </div>
         </div>
 

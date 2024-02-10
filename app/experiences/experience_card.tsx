@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { getSkillsByExperienceId, Skill } from '../skills/skills';
 import { SkillChips } from '../skills/skill_chips';
 import { WorkExperience } from './experinces';
+import { ExperienceBulletPoints } from './experience_bullet_points';
 
 export default function ExperienceCard({ experience }: { experience: WorkExperience }) {
   const router = useRouter();
@@ -40,10 +41,6 @@ export default function ExperienceCard({ experience }: { experience: WorkExperie
             {experience.description}
           </p>
 
-          {experience.bulletPoints && (
-            <ExperienceBulletPoints bulletPoints={experience.bulletPoints} />
-          )}
-
           <div className='mt-8 flex flex-wrap gap-8'>
             <SkillChips skills={getSkills()} />
           </div>
@@ -52,18 +49,3 @@ export default function ExperienceCard({ experience }: { experience: WorkExperie
     </div>
   );
 }
-
-const ExperienceBulletPoints = ({ bulletPoints }: { bulletPoints: string[] }) => {
-  // process the bullet points to remove new lines and empty strings
-  const newBulletPoints = bulletPoints.map((point) => point.replace(/\n/g, '').trim());
-
-  return (
-    <ul className='mt-4 text-md leading-6 text-gray-700'>
-      {newBulletPoints.map((point, index) => (
-        <li key={index} className='my-2 list-inside list-disc'>
-          {point}
-        </li>
-      ))}
-    </ul>
-  );
-};
