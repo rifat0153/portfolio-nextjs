@@ -198,8 +198,7 @@ export const softwareSkills: Skill[] = [
   {
     id: skillIDs.SqlServer,
     name: 'SQL Server',
-    // icon: 'devicon-plain:microsoftsqlserver-wordmark',
-    icon: 'i-devicon-plain:microsoftsqlserver',
+    icon: 'i-devicon-plain-microsoftsqlserver',
     description:
       'SQL Server has been a cornerstone in my arsenal for relational database management. From designing relational schemas to optimizing queries, I’ve leveraged SQL Server to guarantee data integrity, security, and high performance in my applications.',
     url: 'https://www.microsoft.com/en-us/sql-server/',

@@ -1,7 +1,6 @@
 'use client';
 
 import { Card } from '@nextui-org/react';
-import { Icon } from '@iconify/react';
 
 import { Project } from './projects';
 import { SkillChips } from '../skills/skill_chips';
@@ -26,10 +25,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   const icon = () => {
     if (project.link.type === 'external') {
-      return 'bytesize:external';
+      return 'i-bytesize-external';
     }
 
-    return 'uil:link';
+    return 'i-uil-link';
   };
 
   return (
@@ -38,7 +37,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <p className='text-xl'>{project.name}</p>
 
         <button onClick={navigateToProject}>
-          <Icon icon={icon()} className='font-bold' fontSize={20} />
+          <span className={icon()}></span>
         </button>
       </div>
 

@@ -1,5 +1,4 @@
 import React, { ReactNode, useState, useEffect, useRef } from 'react';
-import { Icon } from '@iconify/react';
 
 interface CarouselProps<T> {
   items: T[];
@@ -14,8 +13,8 @@ export function Carousel<T>({
   items,
   renderItem,
   autoplayInterval = 3000,
-  prevIcon = <Icon icon='ic:baseline-arrow-back' fontSize={20} />,
-  nextIcon = <Icon icon='ic:baseline-arrow-forward' fontSize={20} />,
+  prevIcon = <span className='i-ic-baseline-arrow-back'></span>,
+  nextIcon = <span className='i-ic-baseline-arrow-forward'></span>,
 }: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay] = useState(true);

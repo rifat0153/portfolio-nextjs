@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import { Tooltip } from '@nextui-org/react';
 import { useRouter } from 'next/navigation';
 import React from 'react';

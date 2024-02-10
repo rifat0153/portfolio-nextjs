@@ -1,6 +1,5 @@
 'use client';
 
-import { Icon } from '@iconify/react';
 import { Card, CardBody, CardHeader, Chip } from '@nextui-org/react';
 
 import { Skill } from './skills';
@@ -28,7 +27,7 @@ export function SkillCard({
       >
         <CardHeader className='flex items-start justify-between px-4 pb-0 pt-2'>
           <h4 className='text-large font-bold'>{skill.name}</h4>
-          <Icon icon={skill.icon} fontSize={30} />
+          <span className={skill.icon} />
         </CardHeader>
 
         <CardBody>
