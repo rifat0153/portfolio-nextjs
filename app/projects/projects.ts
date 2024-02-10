@@ -52,7 +52,7 @@ export const softwareProjects: Project[] = [
       'tailwindcss',
       'azure',
       'typescript',
-      'rest-api'
+      'rest-api',
     ],
   },
   {
@@ -73,7 +73,7 @@ export const softwareProjects: Project[] = [
       'tailwindcss',
       'azure',
       'typescript',
-      'rest-api'
+      'rest-api',
     ],
   },
   {
@@ -89,11 +89,11 @@ export const softwareProjects: Project[] = [
       'csharp',
       'dotnet',
       'sql-server',
-      'nextjs',
+      'nuxtjs',
       'tailwindcss',
       'typescript',
       'vuejs',
-      'rest-api'
+      'rest-api',
     ],
   },
   {
@@ -105,7 +105,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://github.com/rifat0153/elvan-monorepo',
     },
-    associatedSkills: ['flutter', 'dart', 'firebase', ],
+    associatedSkills: ['flutter', 'dart', 'firebase'],
   },
   {
     id: projectIDs.dailyStarApp,
@@ -126,7 +126,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://apps.apple.com/gb/app/spotlas/id1464125251',
     },
-    associatedSkills: ['flutter', 'rest-api',],
+    associatedSkills: ['flutter', 'rest-api'],
   },
   {
     id: projectIDs.aalokito,

@@ -16,7 +16,7 @@ export interface WorkExperience {
   company: string;
   duration: string;
   description: string;
-  bulletPoints?: string[];
+  bulletPoints: string[];
   country?: string;
   image?: string;
   associatedSkills: (typeof skillIDs)[keyof typeof skillIDs][];
