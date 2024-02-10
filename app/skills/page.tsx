@@ -1,15 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Input } from '@nextui-org/react';
 
 import { softwareSkills } from './skills';
 import { SkillCard } from './skill_card';
 
 export default function SkillsPage() {
-  const router = useRouter();
-
   const [skillList, setskillList] = useState(softwareSkills);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,12 +20,6 @@ export default function SkillsPage() {
     } else {
       setskillList(softwareSkills);
     }
-  };
-
-  const handleNavigation = (skillId: string) => {
-    console.log(skillId);
-
-    router.push(`/skills/${skillId}`);
   };
 
   return (
@@ -46,7 +37,7 @@ export default function SkillsPage() {
         {skillList.map((skill) => {
           return (
             <div key={skill.id} className=''>
-              <SkillCard skill={skill} onPress={handleNavigation} />
+              <SkillCard skill={skill} />
             </div>
           );
         })}

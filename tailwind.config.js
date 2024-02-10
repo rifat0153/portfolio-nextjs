@@ -54,6 +54,9 @@ module.exports = {
         'vscode-icons',
         'bytesize',
         'uil',
+        'fe',
+        'bx',
+        'ph',
       ]),
       // If you want to use all icons from @iconify/json, you can do this:
       // collections: getIconCollections("all"),

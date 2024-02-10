@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang='en'>
-      {/*
+      {/* 
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body
         className={`
-          w-full transition-colors duration-1000
+          w-full transition-width duration-1000
           ${false ? 'dark' : ''}
           ${alegreya.variable} ${inter.variable} font-sans`}
       >
