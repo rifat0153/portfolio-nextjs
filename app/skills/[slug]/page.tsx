@@ -1,7 +1,7 @@
 import { getWorkExperiencesBySkillId } from '@/app/experiences/experinces';
 import { Chip } from '@nextui-org/react';
 import { softwareSkills } from '../skills';
-import ExperienceCard from '@/app/skills/[slug]/experince_card';
+import SkillExperienceCard from '@/app/skills/[slug]/skill_experince_card';
 
 export default function SkillDetail({
   params,
@@ -35,7 +35,7 @@ export default function SkillDetail({
 
         <div className='mt-10 grid auto-rows-min grid-cols-1 gap-4 sm:grid-cols-2'>
           {experiences?.map((experience) => (
-            <ExperienceCard expIdx={experience.id} key={experience.id} />
+            <SkillExperienceCard expIdx={experience.id} key={experience.id} />
           ))}
         </div>
       </section>

@@ -105,7 +105,7 @@ export const softwareProjects: Project[] = [
       type: 'external',
       url: 'https://github.com/rifat0153/elvan-monorepo',
     },
-    associatedSkills: ['flutter', 'dart', 'firebase'],
+    associatedSkills: ['flutter', 'dart', 'firebase', 'clean-architecture', 'nodejs'],
   },
   {
     id: projectIDs.dailyStarApp,
