@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Mahbubur Rahman | Typescript, Dart and C# Developer</title>
+      <title>Mahbubur Rahman | C#, Typescript and Dart Developer</title>
       <meta content='width=device-width, initial-scale=1' name='viewport' />
       <meta
         name='description'

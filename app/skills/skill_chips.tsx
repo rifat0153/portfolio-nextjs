@@ -14,7 +14,9 @@ export function SkillChips({ skills }: { skills: Skill[] }) {
         >
           <div>
             <button>
-              <span className={skill.icon}></span>
+              <span
+                className={`${skill.icon} text-medium transition-all duration-500 ease-in-out lg:text-xl`}
+              ></span>
             </button>
           </div>
         </Tooltip>

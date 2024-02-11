@@ -2,40 +2,35 @@ import Link from 'next/link';
 import { getSkillsByExperienceId } from '../skills/skills';
 import { SkillChips } from '../skills/skill_chips';
 import { WorkExperience } from './experinces';
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 
 export default function ExperienceCard({ experience }: { experience: WorkExperience }) {
   const skills = getSkillsByExperienceId(experience.id);
 
   return (
-    <Link href={`/experiences/${experience.id}`}>
-      <div
-        tabIndex={0}
-        className='w-full cursor-pointer rounded-lg bg-white p-4 text-left shadow-lg transition-shadow duration-200 ease-in-out hover:shadow-xl focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-100
-                  active:outline-none sm:p-6'
+    <Link href={`/experiences/${experience.id}`} className=''>
+      <Card
+        className='w-full cursor-pointer rounded-xl bg-white shadow-md ring-offset-2 transition-shadow duration-1000 ease-in-out hover:shadow-xl focus:outline-1 focus:ring-2 active:ring-2'
         aria-describedby={`experience-${experience.id}-job-title experience-${experience.id}-company experience-${experience.id}-duration experience-${experience.id}-country experience-${experience.id}-description`}
       >
-        <div className='flex items-start gap-4 sm:gap-6'>
-          <div className='flex-grow'>
-            <div className='flex items-center gap-4 text-2xl font-bold leading-8'>
-              <p>{experience.jobTitle}</p>
-            </div>
+        <CardHeader className=''>
+          <p className='text-2xl font-bold'>{experience.jobTitle}</p>
+        </CardHeader>
 
-            <div className='font-normal leading-6'>
-              <p className='pt-2 text-lg font-semibold text-gray-700'>{experience.company}</p>
-              <p className='text-sm leading-6 text-gray-600'>{experience.duration}</p>
-              <p className='text-sm leading-6 text-gray-600'>{experience.country}</p>
-            </div>
+        <CardBody className='font-normal leading-6'>
+          <p className='text-lg font-semibold text-gray-700'>{experience.company}</p>
+          <p className='text-sm leading-6 text-gray-600'>{experience.duration}</p>
+          <p className='text-sm leading-6 text-gray-600'>{experience.country}</p>
 
-            <p className='mt-2 text-lg font-semibold leading-6 text-gray-700'>
-              {experience.description}
-            </p>
+          <p className='py-4 text-lg font-semibold leading-6 text-gray-700'>
+            {experience.description}
+          </p>
+        </CardBody>
 
-            <div className='mt-8 flex flex-wrap gap-8'>
-              <SkillChips skills={skills} />
-            </div>
-          </div>
-        </div>
-      </div>
+        <CardFooter className=''>
+          <SkillChips skills={skills} />
+        </CardFooter>
+      </Card>
     </Link>
   );
 }

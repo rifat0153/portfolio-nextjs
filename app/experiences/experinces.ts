@@ -81,7 +81,7 @@ export const workExperiences: WorkExperience[] = [
   {
     id: experienceIDs.FlutterFreelance,
     jobTitle: 'Flutter Lead & Developer (Contract / Remote)',
-    company: 'Elvan AB, RSI LAB, Spotlas',
+    company: 'Contract / Remote',
     duration: 'January 2022 – May 2023',
     country: 'Sweden, Bangladesh, United Kingdom',
     description: 'Developed and maintained mobile applications for various clients.',

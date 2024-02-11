@@ -19,13 +19,8 @@ const Header = () => {
 
       <div className='flex items-center justify-center gap-10'>
         <Link href='/skills' className={`flex items-center gap-2 ${linkClass('/skills')}`}>
-          <span className='i-ic-baseline-bookmark' />
+          <span className='i-mdi-graduation-cap' />
           <p className='hidden lg:block'>Skills</p>
-        </Link>
-
-        <Link href='/projects' className={`flex items-center gap-2 ${linkClass('/projects')}`}>
-          <span className='i-fe-tiled' />
-          <p className='hidden lg:block'>Projects</p>
         </Link>
 
         <Link
@@ -34,6 +29,11 @@ const Header = () => {
         >
           <span className='i-ph-briefcase-fill' />
           <p className='hidden lg:block'>Experiences</p>
+        </Link>
+
+        <Link href='/projects' className={`flex items-center gap-2 ${linkClass('/projects')}`}>
+          <span className='i-fe-tiled' />
+          <p className='hidden lg:block'>Projects</p>
         </Link>
       </div>
 

@@ -1,4 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mahbubur Rahman's Personal Website
+
+Welcome to my personal website's source code. This site is built using Next.js, TypeScript, and Tailwind CSS, and is hosted on Vercel. The purpose of this website is to showcase my projects, experiences, and skills.
+
+## Connect with me
+
+Feel free to connect with me on these platforms:
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/mahbubur2/" style="margin-right: 15px;">
+    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="mailto:rifat0153@gmail.com" style="margin-right: 15px;">
+    <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail">
+  </a>
+  <a href="https://app.codesignal.com/profile/mahbubur_m9w">
+    <img src="https://app.codesignal.com/favicon.ico" alt="CodeSignal" width="48" height="48">
+  </a>
+</p>
+
+## My Top Skills
+
+- **Frontend Development**: I have experience with React, Vue.js, and Nuxt.js. I have also used Tailwind CSS and Material-UI for styling.
+- **Backend Development**: I have experience with .Net, Node.js, Express.js, SQL Server and MongoDB. I have also used Firebase for serverless applications.
+- **Mobile Development**: I have experience with Flutter and Expo.
+
+## Why Next.js?
+
+I am already using Vue.js/Nuxt.js at work, so I wanted to try something new. I have heard a lot of good things about Next.js and I have used React before, so I decided to give it a try.
 
 ## Getting Started
 
