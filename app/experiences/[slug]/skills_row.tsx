@@ -16,7 +16,7 @@ export const SkillsRow = ({ skillIds }: { skillIds: SkillIDType[] }) => {
               aria-describedby={`skill-${skill.id}-name`}
             >
               <span
-                className={`${skill.icon} text-xl text-blue-500 transition-all duration-500 lg:text-2xl`}
+                className={`${skill.icon} text-xl text-blue-500 transition-all duration-500 md:text-2xl lg:text-4xl`}
               />
 
               <p className='text-xs font-semibold'>{skill.name}</p>

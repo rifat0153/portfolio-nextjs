@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Card className='p-4'>
-      <div className='flex w-full items-start justify-between'>
+      <div className='flex w-full items-start justify-between '>
         <p className='text-xl'>{project.name}</p>
 
         <ProjectLink />

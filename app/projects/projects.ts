@@ -149,4 +149,4 @@ export const softwareProjects: Project[] = [
     },
     associatedSkills: ['nextjs', 'typescript', 'tailwindcss'],
   },
-];
+] as const;
