@@ -3,7 +3,7 @@ import { getSkillsByExperienceId, skillIDs, SkillIDType } from '../skills/skills
 
 export const experienceIDs = {
   Senceive: 'senceive',
-  FlutterFreelance: 'flutter',
+  Flutter: 'flutter',
   PlanBInsights: 'plan-b-insights',
   BengalSoftware: 'bengal-software',
 } as const;
@@ -64,7 +64,7 @@ export const workExperiences: WorkExperience[] = [
     associatedProjects: ['web-monitor-4', 'signal-box', 'production-dashboard'],
   },
   {
-    id: experienceIDs.FlutterFreelance,
+    id: experienceIDs.Flutter,
     jobTitle: 'Flutter Developer',
     company: 'RSI Lab',
     duration: 'January 2022 – May 2023',
@@ -79,6 +79,8 @@ export const workExperiences: WorkExperience[] = [
     ],
     associatedSkills: ['flutter', 'dart', 'nodejs', 'rest-api', 'firebase', 'mongodb'],
     associatedProjects: ['elvan-restaurant-app', 'daily-star-app', 'spotlas'],
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-6b79f.appspot.com/o/daily_star.png?alt=media&token=763e7243-2ea6-408e-b106-198bab7993bb',
   },
   {
     id: experienceIDs.PlanBInsights,
