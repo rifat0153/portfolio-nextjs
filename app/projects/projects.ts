@@ -53,6 +53,7 @@ export const softwareProjects: Project[] = [
       'azure',
       'typescript',
       'rest-api',
+      'entity-framework',
     ],
   },
   {
@@ -74,6 +75,7 @@ export const softwareProjects: Project[] = [
       'azure',
       'typescript',
       'rest-api',
+      'entity-framework',
     ],
   },
   {
@@ -96,6 +98,7 @@ export const softwareProjects: Project[] = [
       'typescript',
       'vuejs',
       'rest-api',
+      'entity-framework',
     ],
   },
   {
